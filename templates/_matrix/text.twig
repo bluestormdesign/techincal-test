@@ -1,0 +1,6 @@
+{% set class = block.alignment != 'center' ? (block.alignment != 'full' ? ' col-md-6' : '') : ' col-md-8 col-md-offset-2' %}
+{% set offsetClass = block.alignment == 'right' and prevAlignment != 'left' ? ' col-md-offset-6' : '' %}
+
+<div class="col-xs-12{{ class }}{{ offsetClass }}">
+    {{ block.text }}
+</div>

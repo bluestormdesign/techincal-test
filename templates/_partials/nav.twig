@@ -1,0 +1,12 @@
+{% cache %}
+	<ul id="nav-main">
+		{% set accesskey = 0 %}
+
+		{% nav page in craft.entries.section('pages').showInNavigation(true).level('<= 1') %}
+			{% set accesskey = accesskey > 10 ? null : accesskey + 1 %}
+			<li class="{{ entry is defined and page.id == entry.id ? 'current' : (entry is defined and page.isAncestorOf(entry) ? 'parent-current') }}">
+				<a href="{{ page.redirect ? page.redirect.url : page.url }}" accesskey="{{ accesskey }}">{{ page.title }}</a>
+			</li>
+		{% endnav %}
+	</ul>
+{% endcache %}

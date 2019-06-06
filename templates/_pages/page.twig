@@ -1,0 +1,51 @@
+{% set listingConfig = entry.listing %}
+
+{% extends '_layout' %}
+
+{% block head %}
+	{% if listingConfig is not null and listingConfig.listingEnabled %}
+		{# Automatic RSS feeds for listings! #}
+		<link rel="alternate" type="application/rss+xml" title="RSS Feed for {{ listingConfig.listingSection }}" href="{{ siteUrl }}rss/{{ listingConfig.listingSection }}.rss" />
+	{% endif %}
+{% endblock %}
+
+{% block foot %}
+	{% if entry.showSocialSharingButtons %}
+		{% include '_partials/addthis' %}
+	{% endif %}
+{% endblock %}
+
+{% block content %}
+	<div class="container">
+		<div class="row">
+			<div class="{{ entry.showSidebar ? siteSettings.contentColumns : 'col-md-12' }}">
+
+				{% include '_partials/banner' %}
+
+				{% include '_partials/breadcrumb' %}
+
+				{% include '_partials/pagefields' %}
+
+				{% if entry.section.type == 'structure' and entry.showChildrenListing %}
+					<div class="children">
+						{% include '_partials/children' with { entry: entry } %}
+					</div>
+				{% endif %}
+
+				{% if listingConfig is not null and listingConfig.listingEnabled %}
+					{% include '_partials/pagelisting' %}
+				{% endif %}
+
+			</div>
+
+			{% if entry.showSidebar %}
+			<div class="{{ siteSettings.sidebarColumns }}">
+				<aside>
+					{% include '_partials/sidebar/sidebar' %}
+				</aside>
+			</div>
+			{% endif %}
+
+		</div>
+	</div>
+{% endblock %}

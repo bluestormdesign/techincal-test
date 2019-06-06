@@ -1,0 +1,42 @@
+{% extends '_layout' %}
+
+{% block content %}
+	<div class="container">
+		<div class="row">
+
+			<div class="{{ entry.showSidebar ? siteSettings.contentColumns : 'col-md-12' }}">
+
+				{% include '_partials/breadcrumb' %}
+
+				{% include '_partials/pagefields' %}
+
+				{% cache %}
+					{% set accesskey = 0 %}
+
+					<ul id="sitemap">
+						{% nav page in craft.entries.section('pages').showInNavigation(true).level('<= 1') %}
+							{% set accesskey = accesskey + 1 %}
+							<li class="{{ entry is defined and page.id == entry.id ? 'current' : (entry is defined and page.isParentOf(entry) ? 'parent-current') }}">
+								({{ accesskey <= 9 ? accesskey : 'N/A' }}) - <a href="{{ page.url }}">{{ page.title }}</a>
+							</li>
+						{% endnav %}
+					</ul>
+				{% endcache %}
+
+				{% if entry.showChildrenListing %}
+					<div class="children">
+						{% include '_partials/children' with { entry: entry } %}
+					</div>
+				{% endif %}
+
+			</div>
+
+			{% if entry.showSidebar %}
+				<aside class="{{ siteSettings.sidebarColumns }}">
+					{% include '_partials/sidebar/sidebar' %}
+				</aside>
+			{% endif %}
+
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% includeJsFile '/dist/app.js' %}
+{% includeCssFile '/dist/app.css' %}
+
+{% extends '_message' %}
+
+{% set title = 'Back soon!' %}
+
+{% block content %}
+	<h1>Back soon!</h1>
+
+	<div class="intro">
+		<p>We're just doing some maintenance and will be back soon.</p>
+	</div>
+
+	<p>Please check back shortly.</p>
+{% endblock %}

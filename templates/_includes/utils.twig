@@ -1,0 +1,46 @@
+{% macro fitImageIn(image, inWidth, inHeight, padding, backgroundImage, format) %}
+	{% set backgroundImage = backgroundImage|default('/skin/white.png') %}
+	{% set format = format|default('png') %}
+
+	{% set resizedImage = craft.imager.transformImage(image, {
+		width: inWidth - (padding|default(0)),
+		height: inHeight - (padding|default(0)),
+		mode: 'fit'
+	}) %}
+
+	{{ craft.imager.transformImage(backgroundImage, {
+		width: inWidth,
+		height: inHeight,
+		mode: 'stretch',
+		watermark: {
+			image: resizedImage.url,
+			width: resizedImage.width,
+			height: resizedImage.height,
+			position: {
+				bottom: ((inHeight / 2) - (resizedImage.height / 2)),
+				right: ((inWidth / 2) - (resizedImage.width / 2))
+			}
+		}
+	}).url }}
+{% endmacro %}
+
+{% macro responsiveImage(image, options, alt, attributes) %}
+	{% set options = options is iterable ? options : { ratio: options } %}
+	{% set image = craft.imager.transformImage(image, options) %}
+
+	{% set transformedImages = craft.imager.transformImage(image, [
+		{ width: 1200 },
+		{ width: 992 },
+		{ width: 768 }
+	]) %}
+
+	<img src="{{ image.url }}" sizes="100vw" srcset="{{ craft.imager.srcset(transformedImages) }}" alt="{{ alt }}">
+{% endmacro %}
+
+{% macro attributes(attributes) %}
+	{% set attributeString = '' %}
+	{% for key, attribute in attributes %}
+	    {% set attributeString = attributeString ~ " " ~ key ~ '="' ~ attribute ~ '"' %}
+	{% endfor %}
+	{{ attributeString|raw }}
+{% endmacro %}

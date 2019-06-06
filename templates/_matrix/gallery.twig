@@ -1,0 +1,37 @@
+{% if block.galleryType == 'grid' %}
+
+    {% if block.gallery|length %}
+    <div class="col-xs-12">
+        <div class="gallery-grid">
+            <div class="row">
+            {% for image in block.gallery %}
+                <div class="col-md-3">
+                    <a href="{{ image.url }}" title="{{ image.title }}" rel="gallery-{{ block.id }}">
+{#                        {{ utils.responsiveImage(image, 4/3, image.title) }}#}
+                        <img src="{{ image.url }}">
+                    </a>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+{% elseif block.galleryType == 'slider' %}
+
+    {% if block.gallery|length %}
+    <div class="col-xs-12">
+        <div class="gallery-slider row">
+        {% for image in block.gallery %}
+            <div>
+                <a href="{{ image.url }}" title="{{ image.title }}">
+{#                    {{ utils.responsiveImage(image, 4/3, image.title, {rel: "gallery-"~block.id}) }}#}
+                    <img src="{{ image.url }}">
+                </a>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+
+{% endif %}

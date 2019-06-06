@@ -1,0 +1,35 @@
+{% extends '_layout' %}
+
+{% if not craft.request.getParam('q') %}
+	{% error 'You must provide a search term!' %}
+{% endif %}
+
+{% set title = 'Search Results: ' ~ craft.request.getParam('q') %}
+
+{% set results = craft.entries({
+	section: 'pages',
+	search: craft.request.getParam('q'),
+	order: 'score'
+}) %}
+
+{% block content %}
+	<div class="container">
+		<div class="row">
+			<div class="{{ siteSettings.contentColumns }}">
+				<h1>Search Results: {{ craft.request.getParam('q') }}</h1>
+
+				<div class="children">
+					<div class="row row-flex">
+						{% for result in results %}
+							{% include '_partials/listing-card' with { entry: result } %}
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+
+			<aside class="{{ siteSettings.sidebarColumns }}">
+				{% include '_partials/sidebar/sidebar' %}
+			</aside>
+		</div>
+	</div>
+{% endblock %}

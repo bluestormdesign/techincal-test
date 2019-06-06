@@ -1,0 +1,10 @@
+{% if alertSettings.alert and alertSettings.alert.alertEnabled and (alertSettings.alert.alertExpiry.format('U')) > ('now'|date('U')) %}
+	{% if not craft.cookies.get('alert') or (craft.cookies.get('alert') and craft.cookies.get('alert') != alertSettings.alert.alertExpiry.format('U')) %}
+		<div id="site-alert" class="alert alert-dismissible alert-{{ alertSettings.alert.alertType }}" data-expiry="{{ alertSettings.alert.alertExpiry.format('U') }}">
+			<div class="container">
+				<button id="site-alert-close" class="close"><i class="far fa-fw fa-times"></i></button>
+				{{ alertSettings.alert.alertText }}
+			</div>
+		</div>
+	{% endif %}
+{% endif %}

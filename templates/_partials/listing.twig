@@ -1,0 +1,22 @@
+{% import '_includes/utils' as utils %}
+
+<div class="col-xs-12">
+	<a href="{{ entry.url }}" class="list-item" title="{{ entry.title }}" onClick="recordEvent('Listing', 'Click', '{{ entry.title }} ({{ entry.url }})');">
+		<div class="row">
+			{% if entry.thumbImage|length %}
+				<div class="col-md-3 {{ loop.index is even ? 'col-md-push-9' }}">
+					<figure class="list-item-image">
+						{{ utils.responsiveImage(entry.thumbImage.first, 4/3, entry.thumbImage.first.title, { class: 'img-responsive' }) }}
+					</figure>
+				</div>
+			{% endif %}
+			<div class="{{ entry.thumbImage|length ? 'col-md-9 ' ~ (loop.index is even ? 'col-md-pull-3') : 'twelve' }}">
+				<h3>{{ entry.title }}</h3>
+				{% if entry.type == 'news' %}<p class="date">{{ entry.postDate.format('jS F Y') }}</p>{% endif %}
+				<div class="list-item-intro">
+					{{ entry.intro }}
+				</div>
+			</div>
+		</div>
+	</a>
+</div>

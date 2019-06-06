@@ -1,0 +1,132 @@
+{% includeJsFile '/dist/manifest.js' %}
+{% includeJsFile '/dist/vendor.js' %}
+{% includeJsFile '/dist/app.js' %}
+{% includeCssFile '/dist/app.css' %}
+{% includeCssFile '/dist/fontawesome.css' %}
+
+{% hook 'renderAdminBar' %}
+
+<!DOCTYPE html>
+<html lang="{{  craft.app.language }}">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<meta name="csrfTokenName" content="{{ craft.config.csrfTokenName|e }}" />
+		<meta name="csrfTokenValue" content="{{ craft.request.csrfToken|e }}" />
+
+		{% hook 'seomaticRender' %}
+
+		{% block head %}{% endblock %}
+
+		<meta name="apple-mobile-web-app-title" content="{{ siteName }}" />
+
+		<link rel="icon" href="/favicon.ico" />
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" />
+
+		{{ getHeadHtml() }}
+	</head>
+
+	<body class="{{ currentUser and currentUser.can('accessCp') ? 'admin' }} {{ craft.request.segments()|join(' ') }} {% block bodyClass %}{% endblock %}">
+		{% include '_partials/ienotice' %}
+
+		<div id="wrapper">
+			<a class="sr-only" href="#content">Skip to main content</a>
+
+			{% include '_partials/alert' %}
+
+			<header id="site-header" class="visible-md visible-lg">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3">
+							<a id="logo" href="{{ siteUrl }}" title="Home" onClick="recordEvent('Header', 'Click', 'Logo');">
+								<img src="/skin/logo.png" alt="{{ siteName }} Logo" class="img-responsive" />
+							</a>
+						</div>
+
+						<div class="col-md-8">
+							<nav id="full">
+								{% include '_partials/nav' %}
+							</nav>
+						</div>
+						<div class="col-md-1 text-center">
+							<a href="#" id="nav-overlay-button" class="open-overlay"><i class="far fa-bars"></i></a>
+						</div>
+					</div>
+				</div>
+
+			</header>
+
+			<main id="content">
+				{% block content %}{% endblock %}
+			</main>
+
+			<footer id="site-footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-7">
+							<div id="contact-details">
+								<p>&copy; {{ siteName }} / Phone: {{ seomatic.site.creator.genericTelephone }} / Email: {{ ('<a href="mailto:' ~ seomatic.site.creator.genericEmail ~ '">' ~ seomatic.site.creator.genericEmail ~ '</a>')|encode }}</p>
+
+								<ul id="social">
+									<li>
+										<a href="{{ seomatic.site.sameAsLinks['facebook']['url'] }}" onClick="recordEvent('Footer Facebook', 'Click', 'Facebook');">
+											<span class="fa-stack fa-lg">
+												<i class="fas fa-circle fa-stack-2x"></i>
+												<i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										<a href="{{ seomatic.site.sameAsLinks['twitter']['url'] }}" onClick="recordEvent('Footer Twitter', 'Click', 'Twitter');">
+										  	<span class="fa-stack fa-lg">
+												<i class="fas fa-circle fa-stack-2x"></i>
+												<i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+											</span>
+										</a>
+									</li>
+									<li>
+										<a href="{{ seomatic.site.sameAsLinks['instagram']['url'] }}" onClick="recordEvent('Footer Instagram', 'Click', 'Instagram');">
+										    <span class="fa-stack fa-lg">
+												<i class="fas fa-circle fa-stack-2x"></i>
+												<i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+											</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-md-5 text-right">
+							<nav id="info">
+								<ul>
+									{% cache globally %}
+										{% nav page in craft.entries.section('information').showInNavigation(true).level('<= 1') %}
+											<li>
+												<a href="{{ page.redirect ? page.redirect.url : page.url }}">{{ page.title }}</a>
+											</li>
+										{% endnav %}
+									{% endcache %}
+								</ul>
+							</nav>
+							<p id="bluestorm">
+								<a href="https://bluestormdesign.co.uk/?utm_source={{ siteName|url_encode }}&amp;utm_medium=Footer+Link&amp;utm_campaign=Client+Links" title="Web Design by Bluestorm Design &amp; Marketing">Web Design by <img src="/skin/bluestorm.png" alt="Web Design by Bluestorm Design &amp; Marketing"></a>
+							</p>
+						</div>
+
+					</div>
+				</div>
+			</footer>
+		</div>
+
+		{% include '_partials/overlay/nav' %}
+
+		{{ getFootHtml() }}
+
+		{% block foot %}{% endblock %}
+	</body>
+</html>

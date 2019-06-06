@@ -1,0 +1,68 @@
+{% include '_partials/overlay/bar' %}
+
+<div id="overlay-menu">
+
+	<a href="#" id="overlay-menu-close" class="close-overlay"><i class="far fa-fw fa-times"></i></a>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="row">
+					<div class="col-md-6">
+						<img src="/skin/logo.png" id="overlay-logo" alt="{{ siteName }}" class="img-responsive">
+					</div>
+				</div>
+				<nav>
+					<ul>
+                        {% cache %}
+							{% nav page in craft.entries.section('pages').showInNavigation(true).level('<= 2') %}
+								<li class="{{ entry is defined and page.id == entry.id ? 'current' : (entry is defined and page.isParentOf(entry) ? 'parent-current') }}">
+									<a href="{{ page.url }}">{{ page.title }} {% if page.getDescendants().showInNavigation(true)|length %}<span><i class="far fa-fw fa-plus"></i></span>{% endif %}</a>
+									{% ifchildren %}
+										<ul>
+											{% children %}
+										</ul>
+									{% endifchildren %}
+								</li>
+							{% endnav %}
+                        {% endcache %}
+					</ul>
+				</nav>
+
+				{% include '_partials/overlay/search' %}
+			</div>
+			<div class="col-md-5 col-md-offset-1">
+				<div>
+					<h2>Get in touch</h2>
+					<ul class="address">
+						<li>{{ seomatic.site.creator.genericStreetAddress }}</li>
+						<li>{{ seomatic.site.creator.genericAddressLocality }}</li>
+						<li>{{ seomatic.site.creator.genericAddressRegion }}</li>
+						<li>{{ seomatic.site.creator.genericPostalCode }}</li>
+						<li>{{ seomatic.site.creator.genericAddressCountry }}</li>
+					</ul>
+				</div>
+
+				<p>
+					<i class="far fa-fw fa-phone"></i> {{ seomatic.site.creator.genericTelephone }}<br>
+					<i class="far fa-fw fa-envelope"></i> {{ ('<a href="mailto:' ~  seomatic.site.creator.genericEmail ~ '">' ~ seomatic.site.creator.genericEmail ~ '</a>')|encode }}
+				</p>
+
+				<h2>Useful Information</h2>
+
+				<nav id="overlay-info">
+					<ul>
+						{% cache globally %}
+							{% nav page in craft.entries.section('information').showInNavigation(true).level('<= 1') %}
+								<li>
+									<a href="{{ page.redirect ? page.redirect.url : page.url }}">{{ page.title }}</a>
+								</li>
+							{% endnav %}
+						{% endcache %}
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+
+</div>

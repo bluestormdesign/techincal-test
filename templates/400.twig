@@ -1,0 +1,18 @@
+{% includeJsFile '/dist/app.js' %}
+{% includeCssFile '/dist/app.css' %}
+
+{% extends '_message' %}
+
+{% set title = 'Something went wrong!' %}
+
+{% block content %}
+	<h1>{{ title }}</h1>
+
+	<div class="intro">
+		<p>{{ message|nl2br }}</p>
+	</div>
+
+	<p>
+		<a href="javascript:history.go(-1);"><i class="fa fa-fw fa-chevron-left"></i> Back</a>
+	</p>
+{% endblock %}

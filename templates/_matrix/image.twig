@@ -1,0 +1,13 @@
+{% set size = block.alignment == 'full' ? { width: 1200 } : 4/3  %}
+{% set offsetClass = block.alignment == 'right' and prevAlignment != 'left' ? ' col-md-offset-6' : '' %}
+
+<div class="col-xs-6{{ block.alignment != 'full' ? ' col-md-6' : '' }}{{ offsetClass }}">
+    <figure class="page-image">
+{#        {{ utils.responsiveImage(block.image.first, size, block.image.first.title, { class: 'img-responsive' }) }}#}
+        <img src="{{ block.image.one.getUrl }}" class="img-responsive" style="width: 100%">
+
+    {% if block.caption %}
+        <figcaption>{{ block.caption }}</figcaption>
+    {% endif %}
+    </figure>
+</div>
