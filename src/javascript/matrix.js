@@ -14,7 +14,7 @@ $(function () {
 	$('div.accordions h3.accordion').first().addClass('open');
 
 	// Galleries
-	$('.gallery-slider').slick({
+	$('.gallery-slider').not('.slick-initialized').slick({
 		slidesToShow: 4,
 		slidesToScroll: 1,
 		dots: true,
