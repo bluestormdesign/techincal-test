@@ -1,0 +1,28 @@
+p.date {
+    color: $lead-color;
+    font-style: italic;
+}
+
+blockquote {
+    margin: 0 0 20px;
+    padding: 10px 20px;
+
+    p {
+        font-style: italic;
+        margin: 0 0 10px;
+    }
+
+    cite {
+        color: $lead-color;
+        font-weight: bold;
+
+        &:before {
+            content: '— ';
+        }
+    }
+}
+
+figure {
+    margin: 0 0 20px;
+    padding: 0;
+}

@@ -1,0 +1,29 @@
+// Colours
+$brand-primary: #009ddc;
+$brand-secondary: #969696;
+$brand-danger: #b33;
+$body-bg: #fff;
+$text-color: #333;
+$headings-color: #333;
+$lead-color: #969696;
+$state-warning-text: #fff;
+$state-warning-bg: #bb875a;
+$link-hover-color: if(lightness($brand-primary) > 35, darken($brand-primary, 50%), lighten($brand-primary, 50%));
+
+// Typography
+$font-family-sans-serif: 'Roboto', sans-serif;
+$line-height-base: 1.75;
+$font-size-base: 16px;
+$font-size-large: 18px;
+$font-size-small: 14px;
+$font-size-h1: 34px;
+$font-size-h2: 26px;
+$font-size-h3: 22px;
+$font-size-h4: 20px;
+$font-size-h5: 16px;
+$font-size-h6: 14px;
+$headings-font-weight: 400;
+$blockquote-font-size: $font-size-base;
+$border-radius-base: 0;
+$border-radius-small: 0;
+$border-radius-large: 0;

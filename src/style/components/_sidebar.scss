@@ -1,0 +1,51 @@
+aside {
+    nav {
+        margin-bottom: 20px;
+    }
+
+    ul {
+        list-style: none;
+        padding-left: 0;
+
+        ul {
+            padding-left: 20px;
+        }
+    }
+
+     > ul li a,
+     > ul li > ul li a,
+     > ul li.current > ul li a {
+        color: $text-color;
+
+        &:hover {
+            color: $brand-primary;
+        }
+    }
+}
+
+ul.tweets {
+    font-size: 1.2rem;
+    list-style: none;
+    padding: 0;
+
+    li.tweet {
+        border-bottom: 1px dotted rgba(115, 127, 140, .15);
+        line-height: 18px;
+        margin: 0;
+        padding: 12px 0 12px 62px;
+        position: relative;
+
+        .tweet-image {
+            margin-left: -62px;
+            position: absolute;
+
+            img {
+                border-radius: 3px;
+            }
+        }
+
+        .tweet-date {
+            opacity: .5;
+        }
+    }
+}

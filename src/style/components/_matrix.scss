@@ -1,0 +1,154 @@
+div.gallery-grid {
+    a {
+        display: block;
+        margin-bottom: 20px;
+        overflow: hidden;
+
+        &:hover {
+            img {
+                transform: scale(1.15);
+            }
+        }
+
+        img {
+            display: block;
+            height: auto;
+            max-width: 100%;
+            transition: all .1s ease;
+        }
+    }
+}
+
+div.gallery-slider {
+    margin-bottom: 50px;
+
+    div {
+        margin: 0 15px;
+
+        @media (max-width: $screen-sm-max) {
+            margin: 0;
+        }
+
+        a {
+            display: block;
+            overflow: hidden;
+
+            &:hover {
+                img {
+                    transform: scale(1.15);
+                }
+            }
+
+            img {
+                height: auto;
+                transition: all .1s ease;
+                width: 100%;
+            }
+        }
+    }
+
+    .gallery-slider .slick-prev {
+        left: 25px;
+        z-index: 10;
+    }
+
+    .slick-track,
+    .slick-list {
+        margin: 0;
+    }
+}
+
+ul.files {
+    margin-bottom: 20px;
+    padding-left: 0;
+
+    li {
+        background: none;
+        list-style: none;
+        margin-bottom: 10px;
+
+        a {
+            background: #f3f3f3;
+            color: $text-color;
+            display: block;
+            line-height: 40px;
+            padding: 15px;
+
+            &:hover {
+                background-color: #ececec;
+                color: $brand-primary;
+            }
+
+            span {
+                float: left;
+                height: 40px;
+                margin-right: 10px;
+                text-align: center;
+                width: 40px;
+
+                i {
+                    font-size: 4.0rem;
+                }
+            }
+        }
+    }
+}
+
+div.accordions {
+    margin-bottom: 15px;
+
+    h3.accordion {
+        background: #505050;
+        color: #fff;
+        cursor: pointer;
+        margin-bottom: 1px;
+        padding: 15px;
+
+        &.open {
+            margin-bottom: 0;
+
+             + div.accordion {
+                display: block;
+            }
+
+            span.accordion-open {
+                display: none;
+            }
+
+            span.accordion-close {
+                display: block;
+            }
+        }
+
+        span {
+            float: right;
+
+            &.accordion-close {
+                display: none;
+            }
+        }
+    }
+
+    div.accordion {
+        border: 1px solid #505050;
+        display: none;
+        padding: 15px;
+    }
+}
+
+figure.page-image,
+figure.list-image {
+    figcaption {
+        font-style: italic;
+        padding: 5px 0 0;
+        text-align: center;
+    }
+}
+
+.oh-google-map-canvas {
+    margin-bottom: 20px;
+}
+
+.col-left {
+    margin-left: .1px;
+}

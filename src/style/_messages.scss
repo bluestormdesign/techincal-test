@@ -1,0 +1,31 @@
+html.message {
+    height: 100%;
+    width: 100%;
+
+    body {
+        background: url('https://picsum.photos/1920/1080/?random=true') no-repeat center center;
+        background-size: cover;
+        display: table;
+        height: 100%;
+        margin: 0;
+        width: 100%;
+
+        div#wrapper {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        main#content {
+            background: rgba(255, 255, 255, .9);
+            margin: 0 auto;
+            padding: 30px;
+            text-align: left;
+        }
+
+        a#logo {
+            display: block;
+            margin-bottom: 30px;
+        }
+    }
+}

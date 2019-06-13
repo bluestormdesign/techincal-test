@@ -1,0 +1,94 @@
+div#ienotice {
+    background: #ccc;
+    color: #000;
+    display: none;
+    margin: 0 auto;
+    padding: 10px 0;
+    text-align: center;
+
+    span {
+        font-style: italic;
+    }
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+
+    &.admin {
+        padding-top: 40px;
+    }
+
+    @media (max-width: $screen-sm-max) {
+        padding-top: 56px;
+    }
+}
+
+.row {
+    &.no-gutters {
+        margin-left: 0;
+        margin-right: 0;
+
+        & > [class^='col-'],
+        & > [class*=' col-'] {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    &.row-flex {
+        align-content: flex-start;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        &:before,
+        &:after {
+            content: none;
+        }
+
+        & > [class^='col-'],
+        & > [class*=' col-'] {
+            display: flex;
+            flex-basis: auto;
+            flex-direction: column;
+        }
+    }
+}
+
+.flex-height {
+    align-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.loading {
+    background: url('/skin/loading.gif') 50% 50% no-repeat;
+    margin-bottom: 20px;
+    min-height: 32px;
+}
+
+.embed-container {
+    height: 0;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    &.embed-container-16-9 {
+        padding-bottom: 56.25%;
+    }
+
+    &.embed-container-4-3 {
+        padding-bottom: 75%;
+    }
+
+    iframe,
+    object,
+    embed {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}

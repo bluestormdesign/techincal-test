@@ -1,0 +1,35 @@
+{
+  "name": "sandbox-craft",
+  "version": "2.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@fortawesome/fontawesome-pro-webfonts": "^1.0.6",
+    "bootstrap-sass": "^3.3.7",
+    "jquery": "^3.2.1",
+    "jquery-match-height": "^0.7.2",
+    "js-cookie": "^2.2.0",
+    "magnific-popup": "^1.1.0",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.19.0",
+    "browser-sync-webpack-plugin": "^1.2.0",
+    "cross-env": "^5.1.1",
+    "laravel-mix": "^1.7.2",
+    "node-sass": "^4.7.2"
+  },
+  "scripts": {
+    "dev": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hot": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "repository": "git+https://github.com/bluestorm/sandbox-craft.git",
+  "author": "Bluestorm Design",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bluestorm/sandbox-craft/issues"
+  },
+  "homepage": "https://github.com/bluestorm/sandbox-craft#readme"
+}

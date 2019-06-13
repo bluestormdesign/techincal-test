@@ -1,0 +1,19 @@
+ul#breadcrumb {
+    font-size: 1.2rem;
+    list-style: none;
+    margin-left: 0;
+    padding: 0;
+
+    li {
+        background: none;
+        display: inline-block;
+
+        &::after {
+            content: ' \00BB';
+        }
+
+        &:last-child::after {
+            content: '';
+        }
+    }
+}

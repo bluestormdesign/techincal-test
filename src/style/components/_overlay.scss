@@ -1,0 +1,134 @@
+div#overlay-bar {
+    background: rgba(0, 0, 0, .5);
+    display: none;
+    left: 0;
+    padding: 10px 15px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: top .2s ease-in-out;
+    z-index: 9999;
+
+    &.offscreen {
+        top: -56px;
+    }
+
+    @media (max-width: $screen-sm-max) {
+        display: block;
+    }
+
+    a#overlay-bar-open-menu {
+        color: #fff;
+        float: left;
+        font-size: 2.1rem;
+    }
+
+    a#overlay-bar-logo {
+        display: block;
+        margin: 0 auto;
+        max-width: 150px;
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-height: 30px;
+            width: auto;
+        }
+    }
+}
+
+// Overlay nav
+
+body.overlay-open {
+    overflow: hidden;
+}
+
+div#overlay-menu {
+    background: rgba(0, 0, 0, .9);
+    bottom: 0;
+    color: #fff;
+    display: none;
+    left: 0;
+    overflow: scroll;
+    padding: 55px 0;
+    position: absolute;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 10000;
+
+    @media (min-width: $screen-md-min) {
+        padding: 135px 0;
+    }
+
+    a#overlay-menu-close {
+        color: #fff;
+        font-size: 3.2rem;
+        position: absolute;
+        right: 15px;
+        top: 3px;
+
+        @media (min-width: $screen-md-min) {
+            right: 40px;
+            top: 40px;
+        }
+    }
+
+    h2 {
+        color: #fff;
+    }
+
+    a:hover {
+        color: darken($brand-primary, 10%);
+    }
+
+    form#overlay-menu-search {
+        margin-bottom: 30px;
+    }
+
+    img#overlay-logo {
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    nav {
+        margin-bottom: 30px;
+
+         > ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+             > li > a {
+                border-bottom: 1px solid rgba(255, 255, 255, .3);
+                color: #fff;
+                font-size: 2rem;
+                padding: 10px;
+
+                span {
+                    float: right;
+                }
+            }
+
+             > li > ul {
+                display: none;
+                list-style: none;
+                margin: 0;
+                padding: 10px 0 0 20px;
+
+                 > li > a {
+                    color: #fff;
+                    padding: 5px 0;
+
+                    span {
+                        display: none;
+                    }
+                }
+            }
+
+            a {
+                display: block;
+            }
+        }
+    }
+}

@@ -1,0 +1,58 @@
+.form {
+    margin: 20px 0;
+
+    ul.nav.nav-tabs {
+        list-style: none;
+        padding: 0;
+
+        li {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            display: inline-block;
+            padding: 0 10px;
+
+            a {
+                color: $lead-color;
+                text-decoration: none;
+            }
+
+            &.active {
+                background: #fff;
+            }
+
+            &.disabled {
+                background: $gray-light;
+                cursor: not-allowed;
+                cursor: disabled;
+
+                a {
+                    color: $lead-color;
+                }
+            }
+        }
+    }
+
+    .form-group {
+        ul.errors {
+            padding: 0 0 0 20px;
+        }
+    }
+
+    textarea {
+        height: 200px;
+        max-width: 100%;
+    }
+
+    select {
+        height: 44px;
+
+        &[multiple] {
+            height: auto;
+        }
+    }
+
+    button {
+        @extend .btn,
+        .btn-primary;
+    }
+}

@@ -1,0 +1,15 @@
+div.alert {
+    a {
+        text-decoration: underline;
+    }
+}
+
+div#site-alert {
+    border-radius: 0;
+    font-weight: 400;
+    padding: 10px 0;
+
+    p:last-child {
+        margin: 0;
+    }
+}

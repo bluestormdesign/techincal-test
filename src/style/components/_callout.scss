@@ -1,0 +1,36 @@
+.callout {
+    display: block;
+    margin-bottom: 20px;
+
+    p {
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    img {
+        display: block;
+        height: auto;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+    &.callout-text {
+        background: $text-color;
+        padding: 15px;
+
+        h3 {
+            color: $brand-primary;
+        }
+
+        p {
+            color: #fff;
+        }
+
+        &:hover {
+            h3 {
+                color: #fff;
+            }
+        }
+    }
+}
