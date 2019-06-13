@@ -4,7 +4,7 @@
 <div class="col-xs-6{{ block.alignment != 'full' ? ' col-md-6' : '' }}{{ offsetClass }}">
     <figure class="page-image">
 {#        {{ utils.responsiveImage(block.image.first, size, block.image.first.title, { class: 'img-responsive' }) }}#}
-        <img src="{{ block.image.one.getUrl }}" class="img-responsive testClass">
+        <img src="{{ block.image.one.getUrl }}" class="img-responsive">
 
     {% if block.caption %}
         <figcaption>{{ block.caption }}</figcaption>
