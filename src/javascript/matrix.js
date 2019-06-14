@@ -39,4 +39,22 @@ $(function () {
 			navigateByImgClick: true,
 		},
 	});
+
+	$('.gallery-slider-top').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		fade: true,
+		asNavFor: '.gallery-slider-bottom'
+	});
+	$('.gallery-slider-bottom').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		asNavFor: '.gallery-slider-top',
+		dots: true,
+		centerMode: true,
+		focusOnSelect: true
+	});
+
+
 });

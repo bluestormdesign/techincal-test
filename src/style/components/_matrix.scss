@@ -58,6 +58,41 @@ div.gallery-slider {
     }
 }
 
+div.gallery-slider-top {
+    .slick-slide {
+        img {
+            width: 100%;
+        }
+
+        a {
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+div.gallery-slider-bottom {
+
+    img {
+        height: auto;
+        width: 100%;
+        padding: 3px;
+    }
+
+    .slick-next:before, .slick-prev:before {
+        color: $brand-primary;
+    }
+
+    .slick-dots li.slick-active button:before {
+        color: $brand-primary;
+    }
+
+    .slick-dots li button:before {
+        color: #94c9df;
+    }
+}
+
 ul.files {
     margin-bottom: 20px;
     padding-left: 0;

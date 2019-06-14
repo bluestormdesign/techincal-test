@@ -12,9 +12,9 @@
 				{% set image = craft.imager.transformImage(banner.bannerImage.first, { height: 500 }) %} 
 				<div class="banner-image-slide" style="background-image: url({{ image.url }});">
 					{% if banner.bannerRedirect %}
-							<a onclick="recordEvent('Banners', 'Click', '{{ banner.title }} ({{ banner.bannerRedirect.url }})');" href="{{ banner.bannerRedirect.url }}" title="This will take you to {{ entry.title }}">
-							</a>
-						{% endif %}
+						<a onclick="recordEvent('Banners', 'Click', '{{ banner.title }} ({{ banner.bannerRedirect.url }})');" href="{{ banner.bannerRedirect.url }}" title="This will take you to {{ entry.title }} ">
+						</a>
+					{% endif %}
 				</div>
 			{% endfor %}
 		</div>
