@@ -1,0 +1,9 @@
+<a {% if class is defined and class|length %}class="{{ class }}"{% endif %}{% if url is defined and url|length %}href="{{ url }}"{% endif %}>{% if label is defined and label|length %}{{ label }}{% endif %}</a>
+
+{# EXAMPLE #}
+
+{#{% include '_partials/common/button' with {#}
+{#    'class' : 'btn btn-primary',#}
+{#    'label' : 'I am a button',#}
+{#    'url' : 'https://www.google.co.uk'#}
+{#} %}#}
