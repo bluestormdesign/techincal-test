@@ -1,0 +1,7 @@
+{% if block.thickness is defined and block.thickness|length %}
+
+    <div class="col-xs-12">
+        <hr style="width: 100%; border: {{ block.thickness.value }} {{ block.style.value }} {{ block.color.getHex() }};">
+    </div>
+
+{% endif %}
