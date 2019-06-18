@@ -24,7 +24,8 @@
     "verbb/default-dashboard": "1.0.5",
     "verbb/super-table": "2.1.20",
     "vlucas/phpdotenv": "^2.4.0",
-    "wbrowar/contentstats": "^2.1.1"
+    "wbrowar/contentstats": "^2.1.1",
+    "wbrowar/craft-grid": "1.2.0"
   },
   "autoload": {
     "psr-4": {

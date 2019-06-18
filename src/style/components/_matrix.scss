@@ -193,3 +193,19 @@ figure.list-image {
 .col-left {
     margin-left: .1px;
 }
+
+.blockquote {
+    border-top: 1px solid $light-grey;
+    border-bottom: 1px solid $light-grey;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    &_quote {
+        color: $brand-primary;
+        font-size: 20px;
+    }
+
+    &_author {
+        color: $text-color;
+    }
+}

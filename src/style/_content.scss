@@ -1,5 +1,5 @@
 p.date {
-    color: $lead-color;
+    color: $intro-color;
     font-style: italic;
 }
 
@@ -13,7 +13,7 @@ blockquote {
     }
 
     cite {
-        color: $lead-color;
+        color: $intro-color;
         font-weight: bold;
 
         &:before {

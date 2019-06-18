@@ -55,7 +55,22 @@
                 {% endfor %}
             </div>
         </div>
+    {% endif %}
 
+{% elseif block.galleryType == 'pinterest' %}
+
+    {% if block.gallery|length %}
+        <div class="col-xs-12">
+            <div class="gallery-pinterest row">
+                {% for image in block.gallery %}
+                    <div class="item">
+                        <a href="{{ image.url }}" title="{{ image.title }}">
+                            <img src="{{ image.url }}">
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
     {% endif %}
 
 {% endif %}
