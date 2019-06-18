@@ -133,7 +133,7 @@ div.accordions {
     margin-bottom: 15px;
 
     h3.accordion {
-        background: #505050;
+        background: $brand-primary;
         color: #fff;
         cursor: pointer;
         margin-bottom: 1px;
@@ -165,7 +165,7 @@ div.accordions {
     }
 
     div.accordion {
-        border: 1px solid #505050;
+        border: 1px solid $brand-primary;
         display: none;
         padding: 15px;
     }
