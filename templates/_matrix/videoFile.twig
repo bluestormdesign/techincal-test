@@ -1,6 +1,6 @@
 {% if block.file.one is defined and block.file.one|length %}
     <div class="{% if block.videoWidth.value == 50 %}col-md-6{% else %}col-md-12{% endif %} videoFileBlock">
-        <video controls>
+        <video controls {% if block.videoThumb is defined and block.videoThumb|length %}poster="{{ block.videoThumb.one.getUrl }}"{% endif %}>
             <source src="{{ block.file.one.getUrl }}" type="video/mp4">
             Your browser does not support HTML5 video.
         </video>
