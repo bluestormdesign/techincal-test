@@ -209,3 +209,34 @@ figure.list-image {
         color: $text-color;
     }
 }
+
+a.callout:hover {
+    .callout-title {
+        color: $brand-primary;
+    }
+}
+
+.callout-three-more {
+    height: 360px!important;
+
+    .callout-title {
+        top: 110px!important;
+        font-size: 27px!important;
+    }
+
+}
+
+.callout-outer {
+    width: 100%;
+    height: 450px;
+    padding: 30px;
+
+    .callout-title {
+        text-align: center;
+        color: #fff;
+        position: relative;
+        top: 165px;
+        font-size: 30px;
+    }
+
+}

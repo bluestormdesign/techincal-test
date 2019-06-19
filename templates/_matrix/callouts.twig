@@ -1,0 +1,32 @@
+{% if block.callouts is defined and block.callouts|length %}
+    {% for callout in block.callouts %}
+
+        {% if block.backgroundPreference.value is defined and block.backgroundPreference.value|length %}
+            {% if block.backgroundPreference.value == "colour" %}
+                {% set backgroundColor = block.color.getHex() %}
+            {% endif %}
+        {% endif %}
+
+        {% if loop.length < 3 %}
+            <div class="col-md-6">
+                <a class="callout" href="{{ callout.url }}">
+                    <div class="callout-outer" {% if backgroundColor is defined and backgroundColor|length %}style="background-color: {{ backgroundColor }}"{% else %}style="background:linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url({{ callout.thumbImage.one.getUrl }}); background-repeat: no-repeat; background-size: cover"{% endif %}>
+                        <div class="callout-title">
+                            {{ callout.title }}
+                        </div>
+                    </div>
+                </a>
+            </div>
+        {% else %}
+            <div class="col-md-4">
+                <a class="callout" href="{{ callout.url }}">
+                    <div class="callout-outer callout-three-more" style="background:linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url({{ callout.thumbImage.one.getUrl }}); background-repeat: no-repeat; background-size: cover">
+                        <div class="callout-title">
+                            {{ callout.title }}
+                        </div>
+                    </div>
+                </a>
+            </div>
+        {% endif %}
+    {% endfor %}
+{% endif %}
