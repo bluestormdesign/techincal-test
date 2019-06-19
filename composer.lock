@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "2c1332cc084eac5bda95b0a93766a7b0",
+    "content-hash": "f63b0247c71d24f99e5a67703d0dafdb",
     "packages": [
         {
             "name": "aelvan/imager",
@@ -191,6 +191,62 @@
                 "twig extension"
             ],
             "time": "2019-04-30T04:15:42+00:00"
+        },
+        {
+            "name": "benjamminf/craft-embedded-assets",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/benjamminf/craft-embedded-assets.git",
+                "reference": "221b28f26b9a5afd4598acea9107dbfa1fdc5825"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/benjamminf/craft-embedded-assets/zipball/221b28f26b9a5afd4598acea9107dbfa1fdc5825",
+                "reference": "221b28f26b9a5afd4598acea9107dbfa1fdc5825",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0",
+                "embed/embed": "^3.3"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "handle": "embeddedassets",
+                "name": "Embedded Assets",
+                "schemaVersion": "1.0.0",
+                "class": "benf\\embeddedassets\\Plugin",
+                "changelogUrl": "https://github.com/benjamminf/craft-embedded-assets/blob/master/CHANGELOG.md",
+                "downloadUrl": "https://github.com/benjamminf/craft-embedded-assets/archive/master.zip"
+            },
+            "autoload": {
+                "psr-4": {
+                    "benf\\embeddedassets\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Benjamin Fleming",
+                    "homepage": "https://github.com/benjamminf"
+                }
+            ],
+            "description": "Manage YouTube videos, Instagram photos, Twitter posts and more as first class assets",
+            "keywords": [
+                "assets",
+                "cms",
+                "craftcms",
+                "embed",
+                "instagram",
+                "plugin",
+                "twitter",
+                "vimeo",
+                "youtube"
+            ],
+            "time": "2018-05-09T03:37:43+00:00"
         },
         {
             "name": "cebe/markdown",
@@ -533,11 +589,11 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.1.31",
+            "version": "3.1.29",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/2c2447caaed72c1edb443cfbea4d7cbc64e41675",
-                "reference": "2c2447caaed72c1edb443cfbea4d7cbc64e41675",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/cb6e3054dd4351653329da508616c15dd0e69874",
+                "reference": "cb6e3054dd4351653329da508616c15dd0e69874",
                 "shasum": ""
             },
             "require": {
@@ -568,7 +624,7 @@
                 "true/punycode": "^2.1.0",
                 "twig/twig": "~2.11.0",
                 "yii2tech/ar-softdelete": "^1.0.2",
-                "yiisoft/yii2": "~2.0.21.0",
+                "yiisoft/yii2": "~2.0.19.0",
                 "yiisoft/yii2-debug": "^2.0.10",
                 "yiisoft/yii2-queue": "2.1.0",
                 "yiisoft/yii2-swiftmailer": "^2.1.0",
@@ -613,7 +669,7 @@
                 "docs": "https://docs.craftcms.com/v3/",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2019-06-18T18:46:14+00:00"
+            "time": "2019-06-04T17:37:55+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
@@ -1249,11 +1305,11 @@
         },
         {
             "name": "ether/simplemap",
-            "version": "3.5.0",
+            "version": "3.4.11",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ethercreative/simplemap/zipball/14a87407c2df933fa1de065ccfcf1bde2e478f98",
-                "reference": "14a87407c2df933fa1de065ccfcf1bde2e478f98",
+                "url": "https://api.github.com/repos/ethercreative/simplemap/zipball/cea5a8bd8468674bc9ca2854d6bd9b22e43d64b7",
+                "reference": "cea5a8bd8468674bc9ca2854d6bd9b22e43d64b7",
                 "shasum": ""
             },
             "require": {
@@ -1287,7 +1343,7 @@
                 "source": "https://github.com/ethercreative/simplemap",
                 "issues": "https://github.com/ethercreative/simplemap/issues"
             },
-            "time": "2019-06-13T13:27:22+00:00"
+            "time": "2019-04-05T17:02:13+00:00"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -2805,139 +2861,6 @@
             "time": "2019-01-02T12:18:36+00:00"
         },
         {
-            "name": "markbaker/complex",
-            "version": "1.4.7",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/MarkBaker/PHPComplex/zipball/1ea674a8308baf547cbcbd30c5fcd6d301b7c000",
-                "reference": "1ea674a8308baf547cbcbd30c5fcd6d301b7c000",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.6.0|^7.0.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Complex\\": "classes/src/"
-                },
-                "files": [
-                    "classes/src/functions/abs.php",
-                    "classes/src/functions/acos.php",
-                    "classes/src/functions/acosh.php",
-                    "classes/src/functions/acot.php",
-                    "classes/src/functions/acoth.php",
-                    "classes/src/functions/acsc.php",
-                    "classes/src/functions/acsch.php",
-                    "classes/src/functions/argument.php",
-                    "classes/src/functions/asec.php",
-                    "classes/src/functions/asech.php",
-                    "classes/src/functions/asin.php",
-                    "classes/src/functions/asinh.php",
-                    "classes/src/functions/atan.php",
-                    "classes/src/functions/atanh.php",
-                    "classes/src/functions/conjugate.php",
-                    "classes/src/functions/cos.php",
-                    "classes/src/functions/cosh.php",
-                    "classes/src/functions/cot.php",
-                    "classes/src/functions/coth.php",
-                    "classes/src/functions/csc.php",
-                    "classes/src/functions/csch.php",
-                    "classes/src/functions/exp.php",
-                    "classes/src/functions/inverse.php",
-                    "classes/src/functions/ln.php",
-                    "classes/src/functions/log2.php",
-                    "classes/src/functions/log10.php",
-                    "classes/src/functions/negative.php",
-                    "classes/src/functions/pow.php",
-                    "classes/src/functions/rho.php",
-                    "classes/src/functions/sec.php",
-                    "classes/src/functions/sech.php",
-                    "classes/src/functions/sin.php",
-                    "classes/src/functions/sinh.php",
-                    "classes/src/functions/sqrt.php",
-                    "classes/src/functions/tan.php",
-                    "classes/src/functions/tanh.php",
-                    "classes/src/functions/theta.php",
-                    "classes/src/operations/add.php",
-                    "classes/src/operations/subtract.php",
-                    "classes/src/operations/multiply.php",
-                    "classes/src/operations/divideby.php",
-                    "classes/src/operations/divideinto.php"
-                ]
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Mark Baker",
-                    "email": "mark@lange.demon.co.uk"
-                }
-            ],
-            "description": "PHP Class for working with complex numbers",
-            "homepage": "https://github.com/MarkBaker/PHPComplex",
-            "keywords": [
-                "complex",
-                "mathematics"
-            ],
-            "time": "2018-10-13T23:28:42+00:00"
-        },
-        {
-            "name": "markbaker/matrix",
-            "version": "1.1.4",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/MarkBaker/PHPMatrix/zipball/6ea97472b5baf12119b4f31f802835b820dd6d64",
-                "reference": "6ea97472b5baf12119b4f31f802835b820dd6d64",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.6.0|^7.0.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Matrix\\": "classes/src/"
-                },
-                "files": [
-                    "classes/src/functions/adjoint.php",
-                    "classes/src/functions/antidiagonal.php",
-                    "classes/src/functions/cofactors.php",
-                    "classes/src/functions/determinant.php",
-                    "classes/src/functions/diagonal.php",
-                    "classes/src/functions/identity.php",
-                    "classes/src/functions/inverse.php",
-                    "classes/src/functions/minors.php",
-                    "classes/src/functions/trace.php",
-                    "classes/src/functions/transpose.php",
-                    "classes/src/operations/add.php",
-                    "classes/src/operations/directsum.php",
-                    "classes/src/operations/subtract.php",
-                    "classes/src/operations/multiply.php",
-                    "classes/src/operations/divideby.php",
-                    "classes/src/operations/divideinto.php"
-                ]
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Mark Baker",
-                    "email": "mark@lange.demon.co.uk"
-                }
-            ],
-            "description": "PHP Class for working with matrices",
-            "homepage": "https://github.com/MarkBaker/PHPMatrix",
-            "keywords": [
-                "mathematics",
-                "matrix",
-                "vector"
-            ],
-            "time": "2018-11-04T22:12:12+00:00"
-        },
-        {
             "name": "masterminds/html5",
             "version": "2.6.0",
             "dist": {
@@ -3463,11 +3386,11 @@
         },
         {
             "name": "nystudio107/craft-retour",
-            "version": "3.1.16",
+            "version": "3.1.15",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-retour/zipball/0890b89a51bddb46bbb7cd2f632999b26ec4edcb",
-                "reference": "0890b89a51bddb46bbb7cd2f632999b26ec4edcb",
+                "url": "https://api.github.com/repos/nystudio107/craft-retour/zipball/c1f1d2796b0c949e80111087cdd806d57efa9eec",
+                "reference": "c1f1d2796b0c949e80111087cdd806d57efa9eec",
                 "shasum": ""
             },
             "require": {
@@ -3492,6 +3415,7 @@
                     "nystudio107\\retour\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
@@ -3510,19 +3434,15 @@
                 "retour",
                 "statistics"
             ],
-            "support": {
-                "docs": "https://nystudio107.com/plugins/retour/documentation",
-                "issues": "https://nystudio107.com/plugins/retour/support"
-            },
-            "time": "2019-06-12T21:38:19+00:00"
+            "time": "2019-05-21T23:44:42+00:00"
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "3.2.9",
+            "version": "3.2.7",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/aa496d365c1310e8514616d64928050681506989",
-                "reference": "aa496d365c1310e8514616d64928050681506989",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/1ffe6b820df3c317f7ff007b9d262aceb206658e",
+                "reference": "1ffe6b820df3c317f7ff007b9d262aceb206658e",
                 "shasum": ""
             },
             "require": {
@@ -3558,6 +3478,7 @@
                     "nystudio107\\seomatic\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
@@ -3569,24 +3490,20 @@
             ],
             "description": "SEOmatic facilitates modern SEO best practices & implementation for Craft CMS 3. It is a turnkey SEO system that is comprehensive, powerful, and flexible.",
             "keywords": [
+                "Craft",
+                "JSON-LD",
+                "Sitemap",
                 "cms",
-                "craft",
                 "craft-plugin",
                 "craftcms",
                 "facebook",
-                "json-ld",
                 "meta",
                 "seo",
                 "seomatic",
-                "sitemap",
                 "tags",
                 "twitter"
             ],
-            "support": {
-                "docs": "https://nystudio107.com/plugins/seomatic/documentation",
-                "issues": "https://nystudio107.com/plugins/seomatic/support"
-            },
-            "time": "2019-06-13T18:50:58+00:00"
+            "time": "2019-06-03T18:31:29+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -3732,83 +3649,6 @@
                 "textrank"
             ],
             "time": "2018-10-08T08:50:14+00:00"
-        },
-        {
-            "name": "phpoffice/phpspreadsheet",
-            "version": "1.7.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/PHPOffice/PhpSpreadsheet/zipball/84e09df79855ed3da84e2eab6850eb7741d8cbda",
-                "reference": "84e09df79855ed3da84e2eab6850eb7741d8cbda",
-                "shasum": ""
-            },
-            "require": {
-                "ext-ctype": "*",
-                "ext-dom": "*",
-                "ext-fileinfo": "*",
-                "ext-gd": "*",
-                "ext-iconv": "*",
-                "ext-libxml": "*",
-                "ext-mbstring": "*",
-                "ext-simplexml": "*",
-                "ext-xml": "*",
-                "ext-xmlreader": "*",
-                "ext-xmlwriter": "*",
-                "ext-zip": "*",
-                "ext-zlib": "*",
-                "markbaker/complex": "^1.4",
-                "markbaker/matrix": "^1.1",
-                "php": "^5.6|^7.0",
-                "psr/simple-cache": "^1.0"
-            },
-            "suggest": {
-                "dompdf/dompdf": "Option for rendering PDF with PDF Writer",
-                "jpgraph/jpgraph": "Option for rendering charts, or including charts with PDF or HTML Writers",
-                "mpdf/mpdf": "Option for rendering PDF with PDF Writer",
-                "tecnickcom/tcpdf": "Option for rendering PDF with PDF Writer"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "PhpOffice\\PhpSpreadsheet\\": "src/PhpSpreadsheet"
-                }
-            },
-            "license": [
-                "LGPL-2.1-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Erik Tilt"
-                },
-                {
-                    "name": "Adrien Crivelli"
-                },
-                {
-                    "name": "Maarten Balliauw",
-                    "homepage": "https://blog.maartenballiauw.be"
-                },
-                {
-                    "name": "Mark Baker",
-                    "homepage": "https://markbakeruk.net"
-                },
-                {
-                    "name": "Franck Lefevre",
-                    "homepage": "https://rootslabs.net"
-                }
-            ],
-            "description": "PHPSpreadsheet - Read, Create and Write Spreadsheet documents in PHP - Spreadsheet engine",
-            "homepage": "https://github.com/PHPOffice/PhpSpreadsheet",
-            "keywords": [
-                "OpenXML",
-                "excel",
-                "gnumeric",
-                "ods",
-                "php",
-                "spreadsheet",
-                "xls",
-                "xlsx"
-            ],
-            "time": "2019-05-26T02:50:36+00:00"
         },
         {
             "name": "pixelandtonic/imagine",
@@ -3990,48 +3830,6 @@
                 "psr-3"
             ],
             "time": "2018-11-20T15:27:04+00:00"
-        },
-        {
-            "name": "psr/simple-cache",
-            "version": "1.0.1",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/simple-cache/zipball/408d5eafb83c57f6365a3ca330ff23aa4a5fa39b",
-                "reference": "408d5eafb83c57f6365a3ca330ff23aa4a5fa39b",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Psr\\SimpleCache\\": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "PHP-FIG",
-                    "homepage": "http://www.php-fig.org/"
-                }
-            ],
-            "description": "Common interfaces for simple caching",
-            "keywords": [
-                "cache",
-                "caching",
-                "psr",
-                "psr-16",
-                "simple-cache"
-            ],
-            "time": "2017-10-23T01:57:42+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -4358,54 +4156,6 @@
             "time": "2015-10-13T18:44:15+00:00"
         },
         {
-            "name": "solspace/craft-freeform",
-            "version": "3.0.2",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/solspace/craft3-freeform/zipball/6ecc529ab699d58b896a617ea29039689f26587f",
-                "reference": "6ecc529ab699d58b896a617ea29039689f26587f",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^3.1.21",
-                "egulias/email-validator": "^2.1",
-                "hashids/hashids": "^2.0",
-                "nesbot/carbon": "^1.22.1|^2.19",
-                "phpoffice/phpspreadsheet": "^1.6.0",
-                "solspace/craft3-commons": "^1.0.20",
-                "stripe/stripe-php": "^6.6.0",
-                "symfony/filesystem": "^2.8|^3.0|^4.0",
-                "symfony/finder": "^2.8|^3.0|^4.0",
-                "symfony/property-access": "^2.8|^3.0|^4.0"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "schemaVersion": "3.0.2",
-                "handle": "freeform",
-                "class": "Solspace\\Freeform\\Freeform",
-                "name": "Freeform",
-                "developer": "Solspace",
-                "developerUrl": "http://docs.solspace.com/craft/freeform/v3/",
-                "documentationUrl": "http://docs.solspace.com/craft/freeform/v3/",
-                "changelogUrl": "https://raw.githubusercontent.com/solspace/craft3-freeform/v3/CHANGELOG.md",
-                "hasSettings": true,
-                "hasCpSection": true
-            },
-            "autoload": {
-                "psr-4": {
-                    "Solspace\\Freeform\\": "src/"
-                }
-            },
-            "authors": [
-                {
-                    "name": "Solspace",
-                    "homepage": "https://solspace.com/"
-                }
-            ],
-            "description": "The most reliable, intuitive and powerful form builder for Craft.",
-            "time": "2019-06-18T20:21:12+00:00"
-        },
-        {
             "name": "solspace/craft3-commons",
             "version": "1.0.20",
             "dist": {
@@ -4521,57 +4271,6 @@
             "time": "2019-05-16T19:41:54+00:00"
         },
         {
-            "name": "spicyweb/craft-embedded-assets",
-            "version": "2.0.6",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spicywebau/craft-embedded-assets/zipball/7a36d9fe7f8e3194c262ca51ab52c03257164243",
-                "reference": "7a36d9fe7f8e3194c262ca51ab52c03257164243",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^3.0.0",
-                "embed/embed": "^3.3"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "handle": "embeddedassets",
-                "name": "Embedded Assets",
-                "schemaVersion": "1.0.0",
-                "class": "spicyweb\\embeddedassets\\Plugin",
-                "changelogUrl": "https://github.com/spicywebau/craft-embedded-assets/blob/master/CHANGELOG.md",
-                "downloadUrl": "https://github.com/spicywebau/craft-embedded-assets/archive/master.zip"
-            },
-            "autoload": {
-                "psr-4": {
-                    "spicyweb\\embeddedassets\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Spicy Web",
-                    "homepage": "https://spicyweb.com.au"
-                }
-            ],
-            "description": "Manage YouTube videos, Instagram photos, Twitter posts and more as first class assets",
-            "keywords": [
-                "assets",
-                "cms",
-                "craftcms",
-                "embed",
-                "instagram",
-                "plugin",
-                "twitter",
-                "vimeo",
-                "youtube"
-            ],
-            "time": "2019-06-12T02:22:57+00:00"
-        },
-        {
             "name": "ssnepenthe/color-utils",
             "version": "0.4.2",
             "dist": {
@@ -4633,50 +4332,6 @@
                 "transformation"
             ],
             "time": "2017-06-19T16:48:17+00:00"
-        },
-        {
-            "name": "stripe/stripe-php",
-            "version": "v6.38.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/8588b74aecd46ed5df3d97a132c922b020ca80bc",
-                "reference": "8588b74aecd46ed5df3d97a132c922b020ca80bc",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*",
-                "ext-json": "*",
-                "ext-mbstring": "*",
-                "php": ">=5.4.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Stripe\\": "lib/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Stripe and contributors",
-                    "homepage": "https://github.com/stripe/stripe-php/contributors"
-                }
-            ],
-            "description": "Stripe PHP Library",
-            "homepage": "https://stripe.com/",
-            "keywords": [
-                "api",
-                "payment processing",
-                "stripe"
-            ],
-            "time": "2019-06-18T06:29:48+00:00"
         },
         {
             "name": "studioespresso/craft-dumper",
@@ -6323,11 +5978,11 @@
         },
         {
             "name": "yiisoft/yii2",
-            "version": "2.0.21",
+            "version": "2.0.19",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/7e4622252c5f272373e1339a47d331e4a55e9591",
-                "reference": "7e4622252c5f272373e1339a47d331e4a55e9591",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/3e74c7338dd83cea6ffc6f5c25202b9f2f271f89",
+                "reference": "3e74c7338dd83cea6ffc6f5c25202b9f2f271f89",
                 "shasum": ""
             },
             "require": {
@@ -6357,6 +6012,7 @@
                     "yii\\": ""
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -6413,7 +6069,7 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2019-06-18T14:25:08+00:00"
+            "time": "2019-05-21T16:01:16+00:00"
         },
         {
             "name": "yiisoft/yii2-composer",
