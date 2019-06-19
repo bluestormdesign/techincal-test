@@ -92,3 +92,8 @@ body {
         width: 100%;
     }
 }
+
+
+.slick-next:before, .slick-prev:before {
+    color: $brand-primary;
+}

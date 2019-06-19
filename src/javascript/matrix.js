@@ -56,4 +56,24 @@ $(function () {
 		focusOnSelect: true
 	});
 
+
+	// Callouts slider
+
+	$('.callouts-slider').not('.slick-initialized').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		dots: true,
+		arrows: true,
+		rows: 0,
+		responsive: [
+			{
+				breakpoint: 767,
+				settings: {
+					arrows: false,
+					slidesToShow: 1
+				}
+			}
+		]
+	});
+
 });
