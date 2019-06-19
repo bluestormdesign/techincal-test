@@ -1,7 +1,7 @@
 {
-    "/dist/app.js": "/dist/app.js",
-    "/dist/app.css": "/dist/app.css",
-    "/dist/fontawesome.css": "/dist/fontawesome.css",
-    "/dist/vendor.js": "/dist/vendor.js",
-    "/dist/manifest.js": "/dist/manifest.js"
+    "/dist/app.js": "/dist/app.js?id=82889b0931acdf7ec8ec",
+    "/dist/app.css": "/dist/app.css?id=d4044a2331873df07555",
+    "/dist/fontawesome.css": "/dist/fontawesome.css?id=cc6ef8dab434b0ea4ad8",
+    "/dist/vendor.js": "/dist/vendor.js?id=fe86835fe7160bb45b2e",
+    "/dist/manifest.js": "/dist/manifest.js?id=2d315777967b6001bcf1"
 }

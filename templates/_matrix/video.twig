@@ -1,0 +1,13 @@
+<div class="{% if block.width.value == 50 %}col-md-6{% else %}col-md-12{% endif %}">
+    {% if block.host == 'youtube' %}
+        {% set videoId = block.videoUrl|split('=')[1] %}
+        <iframe class="{% if block.width.value == 50 %}videoPlayerHalfWidth{% else %}videoPlayerFullWidth{% endif %}" type="text/html"
+                src="https://www.youtube.com/embed/{{ videoId }}?autoplay=0&amp;origin={{ siteUrl }}"
+                frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    {% else %}
+        {% set videoUrlArr = block.videoUrl|split('/') %}
+        {% set videoId = videoUrlArr[videoUrlArr|length-1] %}
+        <iframe class="videoPlayer" src="//player.vimeo.com/video/{{ videoId }}?title=0&amp;byline=0&amp;portrait=0&amp;color=136485&amp;autoplay=0"
+                frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    {% endif %}
+</div>
