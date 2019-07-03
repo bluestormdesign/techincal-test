@@ -27,12 +27,12 @@
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" />
-
-		{{ getHeadHtml() }}
 	</head>
 
 	<body class="{{ currentUser and currentUser.can('accessCp') ? 'admin' }} {{ craft.request.segments()|join(' ') }} {% block bodyClass %}{% endblock %}">
 		{% include '_partials/ienotice' %}
+
+		{% include '_partials/accesibility_panel' %}
 
 		<div id="wrapper">
 			<a class="sr-only" href="#content">Skip to main content</a>

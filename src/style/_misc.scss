@@ -23,6 +23,62 @@ body {
     }
 }
 
+body.high-contrast-body {
+    background-color: #000;
+
+    h1, h2, h3, h4, h5, h6, p, a, ul, li {
+        color: $yellow;
+    }
+
+    .contrast-panel-bg {
+        background-color: $yellow;
+
+        a {
+            color: #000!important;
+        }
+    }
+
+    #breadcrumb {
+        li {
+            color: $yellow;
+        }
+    }
+
+    #nav-main {
+        li {
+            a {
+                color: $yellow!important;
+            }
+        }
+    }
+
+    .page-image {
+        color: $yellow;
+    }
+
+    .form {
+        label {
+            color: $yellow;
+        }
+    }
+    
+    .fa-inverse {
+        color: #000;
+    }
+
+    #bluestorm {
+        a {
+            color: $yellow!important;
+        }
+    }
+
+    #overlay-menu {
+        h1, h2, h3, h4, h5, h6, p, a {
+            color: $yellow;
+        }
+    }
+}
+
 .row {
     &.no-gutters {
         margin-left: 0;

@@ -2,6 +2,7 @@
 $brand-primary: #009ddc;
 $brand-secondary: #969696;
 $brand-danger: #b33;
+$contrast-panel-bg: #e0e0e0;
 $body-bg: #fff;
 $text-color: #333;
 $light-grey: #E5E5E5;
@@ -9,6 +10,7 @@ $headings-color: #333;
 $intro-color: #969696;
 $state-warning-text: #fff;
 $state-warning-bg: #bb875a;
+$yellow: #fff10f;
 $link-hover-color: if(lightness($brand-primary) > 35, darken($brand-primary, 50%), lighten($brand-primary, 50%));
 
 // Typography

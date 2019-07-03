@@ -1,0 +1,43 @@
+.contrast-panel-bg {
+    background-color: $contrast-panel-bg;
+}
+
+.contrast-panel {
+    .right-size {
+
+        .contrast-options {
+            margin-left: 10px;
+
+            .normal {
+                background-color: #fff;
+                border: 1px solid $brand-primary;
+            }
+
+            .high-contrast {
+                background-color: $yellow;
+                border: 1px solid #000;
+            }
+
+            a {
+                padding: 2px 7px;
+            }
+        }
+
+        .text-size {
+            .small {
+                font-size: 16px;
+            }
+            .medium {
+                font-size: 20px;
+            }
+            .large {
+                font-size: 24px;
+            }
+        }
+
+        div {
+            max-width: 50%;
+            display: inline-block;
+        }
+    }
+}

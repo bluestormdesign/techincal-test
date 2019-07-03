@@ -40,4 +40,23 @@ $(function () {
 		rows: 0
 	});
 
+	// Accessibility panel
+
+	var className = "high-contrast-body";
+	if (Cookies.get("contrast") === undefined) {
+		$('body').removeClass(className);
+	} else {
+		$('body').addClass(className);
+	}
+
+	$('.high-contrast').click(function() {
+		$('body').addClass('high-contrast-body');
+		Cookies.set('contrast', 'high-contrast');
+	});
+
+	$('.normal').click(function() {
+		$('body').removeClass('high-contrast-body');
+		Cookies.remove('contrast');
+	});
+
 });

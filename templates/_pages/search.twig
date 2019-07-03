@@ -5,7 +5,7 @@
 	{% set title = 'Search Results: ' ~ craft.request.getParam('q') %}
 
 	{% set results = craft.entries({
-		section: 'pages',
+		section: 'pages, search',
 		search: craft.app.request.getParam('q'),
 		order: 'score'
 	}) %}
