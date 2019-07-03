@@ -31,7 +31,7 @@ $(function () {
 		]
 	});
 
-	$('.gallery-grid, .gallery-slider').magnificPopup({
+	$('.gallery-grid, .gallery-slider, .gallery-pinterest').magnificPopup({
 		delegate: 'a',
 		type: 'image',
 		gallery: {
