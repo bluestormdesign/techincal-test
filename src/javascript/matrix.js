@@ -56,6 +56,7 @@ $(function () {
 		focusOnSelect: true
 	});
 
+	gridify.init();
 
 	// Callouts slider
 
@@ -77,3 +78,4 @@ $(function () {
 	});
 
 });
+

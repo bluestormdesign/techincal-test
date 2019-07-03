@@ -93,6 +93,32 @@ div.gallery-slider-bottom {
     }
 }
 
+/* PART OF PINTEREST GALLERY */
+
+.column.size-1of3 {
+    width: 33.333%;
+    float: left;
+}
+
+.column.size-1of2 {
+    width: 50%;
+    float: left;
+}
+
+.column.size-1of1 {
+    width: 100%;
+    float: left;
+}
+
+.pinterest-item {
+    a {
+        img {
+            max-width: 100%;
+            padding: 5px;
+        }
+    }
+}
+
 ul.files {
     margin-bottom: 20px;
     padding-left: 0;

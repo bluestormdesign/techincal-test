@@ -60,10 +60,9 @@
 {% elseif block.galleryType == 'pinterest' %}
 
     {% if block.gallery|length %}
-        <div class="col-xs-12">
-            <div class="gallery-pinterest row">
+            <div class="gallery-pinterest" {% if craft.mobileDetect.isPhone %}data-gridify="1-columns"{% elseif craft.mobileDetect.isTablet %}data-gridify="2-columns"{% else %}data-gridify="3-columns"{% endif %}>
                 {% for image in block.gallery %}
-                    <div class="item">
+                    <div class="pinterest-item">
                         <a href="{{ image.url }}" title="{{ image.title }}">
                             <img src="{{ image.url }}">
                         </a>
