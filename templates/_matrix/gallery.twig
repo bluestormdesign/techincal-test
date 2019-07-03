@@ -6,7 +6,7 @@
             <div class="row">
             {% for image in block.gallery %}
                 <div class="col-md-3">
-                    <a href="{{ image.url }}" title="{{ image.title }}" rel="gallery-{{ block.id }}">
+                    <a href="{{ image.url }}" title="{{ image.title }}" rel="gallery-{{ block.id }}" data-effect="mfp-zoom-in">
                         <img src="{{ image.url }}">
                     </a>
                 </div>
@@ -23,7 +23,7 @@
         <div class="gallery-slider row">
         {% for image in block.gallery %}
             <div>
-                <a href="{{ image.url }}" title="{{ image.title }}">
+                <a href="{{ image.url }}" title="{{ image.title }}" data-effect="mfp-zoom-in">
                     <img src="{{ image.url }}">
                 </a>
             </div>
@@ -39,7 +39,7 @@
             <div class="gallery-slider-top">
                 {% for image in block.gallery %}
                     <div>
-                        <a href="{{ image.url }}" title="{{ image.title }}">
+                        <a href="{{ image.url }}" title="{{ image.title }}" data-effect="mfp-zoom-in">
                             <img src="{{ image.url }}">
                         </a>
                     </div>
@@ -63,7 +63,7 @@
             <div class="gallery-pinterest" {{ craft.mobileDetect.isPhone ? 'data-gridify="1-columns"' : craft.mobileDetect.isTablet ? 'data-gridify="2-columns"' : 'data-gridify="3-columns"' }}>
                 {% for image in block.gallery %}
                     <div class="pinterest-item" data-lightbox="gallery">
-                        <a href="{{ image.url }}" title="{{ image.title }}">
+                        <a href="{{ image.url }}" title="{{ image.title }}" data-effect="mfp-zoom-in">
                             <img src="{{ image.url }}">
                         </a>
                     </div>
