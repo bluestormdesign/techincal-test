@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b1a23d10f88479e8821f507a18796c7e",
+    "content-hash": "863f64d4b7460b48a92d0f7f68fbc6e5",
     "packages": [
         {
             "name": "aelvan/imager",
@@ -3573,6 +3573,112 @@
             ],
             "description": "A PHP library for improving your web typography",
             "time": "2019-01-28T23:17:29+00:00"
+        },
+        {
+            "name": "naboo/craft-siteduplicate",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/naboo/craft-siteduplicate.git",
+                "reference": "89d2cc02b82a67a2573462ed3fb2fb59993d82cf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/naboo/craft-siteduplicate/zipball/89d2cc02b82a67a2573462ed3fb2fb59993d82cf",
+                "reference": "89d2cc02b82a67a2573462ed3fb2fb59993d82cf",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.1.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Site Duplicate",
+                "handle": "siteduplicate",
+                "hasCpSettings": true,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/naboo/craft-siteduplicate/master/CHANGELOG.md",
+                "class": "naboo\\siteduplicate\\SiteDuplicatePlugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "naboo\\siteduplicate\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Johan Strömqvist",
+                    "homepage": "http://www.naboovalley.com"
+                }
+            ],
+            "description": "Site Duplicate let's you duplicate entries across Sites in Craft CMS.",
+            "keywords": [
+                "Craft",
+                "cms",
+                "craftcms",
+                "duplicate",
+                "entry",
+                "site",
+                "sites"
+            ],
+            "time": "2019-03-12T09:54:06+00:00"
+        },
+        {
+            "name": "nav33d/craft-activitylog",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Nav33d/craft-activitylog.git",
+                "reference": "274f8b62209c84a9d6f1a5fd07c340b55b052635"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Nav33d/craft-activitylog/zipball/274f8b62209c84a9d6f1a5fd07c340b55b052635",
+                "reference": "274f8b62209c84a9d6f1a5fd07c340b55b052635",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Activity Log",
+                "handle": "activitylog",
+                "schemaVersion": "1.0.0",
+                "hasCpSettings": true,
+                "hasCpSection": true,
+                "changelogUrl": "https://raw.githubusercontent.com/nav33d/craft-activitylog/v1/CHANGELOG.md",
+                "class": "nav33d\\activitylog\\ActivityLog"
+            },
+            "autoload": {
+                "psr-4": {
+                    "nav33d\\activitylog\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Naveed Ziarab",
+                    "homepage": "https://naveedziarab.co.uk/"
+                }
+            ],
+            "description": "Log activity inside Craft CMS control panel",
+            "keywords": [
+                "Craft",
+                "activitylog",
+                "cms",
+                "craft-plugin",
+                "craftcms",
+                "craftcms3"
+            ],
+            "time": "2019-05-31T17:28:47+00:00"
         },
         {
             "name": "nesbot/carbon",
