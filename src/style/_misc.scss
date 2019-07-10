@@ -14,13 +14,14 @@ div#ienotice {
 body {
     -webkit-font-smoothing: antialiased;
 
-    &.admin {
-        padding-top: 40px;
-    }
-
     @media (max-width: $screen-sm-max) {
         padding-top: 56px;
     }
+
+    #wrapper {
+        margin-top: 42px;
+    }
+
 }
 
 body.high-contrast-body {
