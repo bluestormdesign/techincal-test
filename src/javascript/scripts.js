@@ -49,12 +49,14 @@ $(function () {
 		$('body').addClass(className);
 	}
 
-	$('.high-contrast').click(function() {
+	$('.high-contrast').click(function(e) {
+		e.preventDefault();
 		$('body').addClass('high-contrast-body');
 		Cookies.set('contrast', 'high-contrast');
 	});
 
-	$('.normal').click(function() {
+	$('.normal').click(function(e) {
+		e.preventDefault();
 		$('body').removeClass('high-contrast-body');
 		Cookies.remove('contrast');
 	});
@@ -87,7 +89,8 @@ $(function () {
 	}
 	loadFontSize();
 
-	$('a.large').click( function() {
+	$('a.large').click( function(e) {
+		e.preventDefault();
 		if(Cookies.get("text-size") === 'large') {
 			return;
 		}
@@ -101,7 +104,8 @@ $(function () {
 		}
 	});
 
-	$('a.small').click( function() {
+	$('a.small').click( function(e) {
+		e.preventDefault();
 		if(Cookies.get("text-size") === 'small') {
 			return;
 		}
@@ -115,7 +119,8 @@ $(function () {
 		}
 	});
 
-	$('a.medium').click( function() {
+	$('a.medium').click( function(e) {
+		e.preventDefault();
 		Cookies.remove('text-size');
 		location.reload();
 	});
