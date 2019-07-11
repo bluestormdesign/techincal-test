@@ -5,7 +5,7 @@
 	{% set title = 'Search Results: ' ~ craft.request.getParam('q') %}
 
 	{% set results = craft.entries({
-		section: 'pages, search',
+		section: 'pages, search, news',
 		search: craft.app.request.getParam('q'),
 		order: 'score'
 	}) %}
@@ -19,7 +19,7 @@
 					<div class="children">
 						<div class="row row-flex">
 							{% for result in results %}
-								{% include '_partials/listing-card' with { entry: result } %}
+								{% include '_partials/search-result' with { entry: result } %}
 							{% endfor %}
 						</div>
 					</div>

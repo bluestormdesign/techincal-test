@@ -14,7 +14,7 @@ window.csrfTokenData = function () {
 	return {
 		[csrfInputName]: csrfInputValue
 	};
-}
+};
 
 $(function () {
 	$('input[name="' + csrfInputName + '"]').val(csrfInputValue);
