@@ -12,6 +12,7 @@ $state-warning-text: #fff;
 $state-warning-bg: #bb875a;
 $yellow: #fff10f;
 $link-hover-color: if(lightness($brand-primary) > 35, darken($brand-primary, 50%), lighten($brand-primary, 50%));
+$border-grey: #f2f5f7;
 
 // Typography
 $font-family-sans-serif: 'Roboto', sans-serif;

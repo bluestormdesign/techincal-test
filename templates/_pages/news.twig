@@ -34,7 +34,9 @@
 				{% endif %}
 
 				{% if listingConfig is not null and listingConfig.listingEnabled %}
-					{% include '_partials/pagelisting' %}
+					{% include '_partials/pagelisting' with {
+						type : 'news'
+					} %}
 				{% endif %}
 
 			</div>

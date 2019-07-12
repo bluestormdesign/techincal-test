@@ -1,0 +1,26 @@
+<div class="col-md-6 col-xs-12 news-card-outer">
+    <a href="{{ entry.getUrl }}">
+        <div class="row">
+            <div class="col-md-3 col-xs-12">
+                {% if entry.thumbImage is defined and entry.thumbImage|length %}
+                    <div class="news-thumbImage">
+                        <img src="{{ entry.thumbImage.first.getUrl }}" alt="{{ entry.thumbImage.first.title }}">
+                    </div>
+                {% endif %}
+            </div>
+            <div class="col-md-9 col-xs-12">
+                {% if entry.title is defined and entry.title|length %}
+                    <div class="news-title">
+                        <h3>{{ entry.title }}</h3>
+                    </div>
+                    <div class="news-postDate">{{ entry.postDate.format('jS F Y') }}</div>
+                {% endif %}
+                {% if entry.intro is defined and entry.intro|length %}
+                    <div class="news-intro">
+                        {{ entry.intro|hacksaw(chars='100', append='...', allow='<p>') }}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </a>
+</div>

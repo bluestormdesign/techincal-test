@@ -11,7 +11,15 @@
 <div id="ajax-container" data-section="{{ listingConfig.listingSection }}" data-limit="{{ listingConfig.listingLimit }}" data-order="{{ listingConfig.listingOrder }}" data-sort="{{ listingConfig.listingSort }}" data-year="{{ craft.request.getParam('year') }}" data-month="{{ craft.request.getParam('month') }}">
     <div class="row row-flex">
         {% for entry in sectionEntries %}
-            {% include '_partials/listing-card' with { entry: entry } %}
+            {% if type is defined and type|length %}
+                {% if type == 'news' %}
+                    {% include '_partials/news-listing-card' with { entry: entry } %}
+                {% else %}
+                    {% include '_partials/listing-card' with { entry: entry } %}
+                {% endif %}
+            {% else %}
+                {% include '_partials/listing-card' with { entry: entry } %}
+            {% endif %}
         {% endfor %}
     </div>
 </div>
