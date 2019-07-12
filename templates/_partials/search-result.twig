@@ -1,0 +1,9 @@
+<div class="col-md-12 col-xs-12 search-card-outer">
+    <a href="{{ entry.url }}">
+        <div class="search-card-inner">
+            <div class="result-title"> {{ entry.title }} </div>
+            <div class="result-url">{{ entry.url }}</div>
+            <div class="result-intro">{{ entry.intro|hacksaw(chars='150', append='...', allow='<p>')}}</div>
+        </div>
+    </a>
+</div>
