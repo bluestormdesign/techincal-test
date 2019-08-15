@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "0f1cd997baa3d40aa92a0202e3fc471e",
+    "content-hash": "ff7c35dba50d7462772fc585806e6f86",
     "packages": [
         {
             "name": "aelvan/imager",
@@ -472,18 +472,15 @@
         },
         {
             "name": "composer/spdx-licenses",
-            "version": "1.5.1",
+            "version": "1.5.2",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/spdx-licenses/zipball/a1aa51cf3ab838b83b0867b14e56fc20fbd55b3d",
-                "reference": "a1aa51cf3ab838b83b0867b14e56fc20fbd55b3d",
+                "url": "https://api.github.com/repos/composer/spdx-licenses/zipball/7ac1e6aec371357df067f8a688c3d6974df68fa5",
+                "reference": "7ac1e6aec371357df067f8a688c3d6974df68fa5",
                 "shasum": ""
             },
             "require": {
                 "php": "^5.3.2 || ^7.0 || ^8.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.8.35 || ^5.7 || 6.5 - 7"
             },
             "type": "library",
             "extra": {
@@ -496,7 +493,6 @@
                     "Composer\\Spdx\\": "src"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -523,21 +519,21 @@
                 "spdx",
                 "validator"
             ],
-            "time": "2019-03-26T10:23:26+00:00"
+            "time": "2019-07-29T10:31:59+00:00"
         },
         {
             "name": "craftcms/cms",
-            "version": "3.1.29",
+            "version": "3.2.10",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/cb6e3054dd4351653329da508616c15dd0e69874",
-                "reference": "cb6e3054dd4351653329da508616c15dd0e69874",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/620fa9e16ae1d6d205868754959c459f55128da2",
+                "reference": "620fa9e16ae1d6d205868754959c459f55128da2",
                 "shasum": ""
             },
             "require": {
                 "composer/composer": "1.6.3",
                 "craftcms/oauth2-craftid": "~1.0.0",
-                "craftcms/plugin-installer": "~1.5.0",
+                "craftcms/plugin-installer": "~1.5.3",
                 "craftcms/server-check": "~1.1.0",
                 "creocoder/yii2-nested-sets": "~0.9.0",
                 "danielstjules/stringy": "^3.1.0",
@@ -556,13 +552,13 @@
                 "league/oauth2-client": "^2.2.1",
                 "mikehaertl/php-shellcommand": "^1.2.5",
                 "php": ">=7.0.0",
-                "pixelandtonic/imagine": "~0.7.1.2",
+                "pixelandtonic/imagine": "~1.2.2.1",
                 "seld/cli-prompt": "^1.0.3",
                 "symfony/yaml": "^3.2|^4.0",
                 "true/punycode": "^2.1.0",
                 "twig/twig": "~2.11.0",
                 "yii2tech/ar-softdelete": "^1.0.2",
-                "yiisoft/yii2": "~2.0.19.0",
+                "yiisoft/yii2": "~2.0.21.0",
                 "yiisoft/yii2-debug": "^2.0.10",
                 "yiisoft/yii2-queue": "2.1.0",
                 "yiisoft/yii2-swiftmailer": "^2.1.0",
@@ -578,12 +574,6 @@
                 "bower-asset/punycode": "1.3.*",
                 "bower-asset/yii2-pjax": "~2.0.1"
             },
-            "require-dev": {
-                "codeception/codeception": "^2.4",
-                "codeception/mockery-module": "~0.2.2",
-                "codeception/specify": "~0.4.6",
-                "codeception/verify": "~0.3.3"
-            },
             "suggest": {
                 "ext-iconv": "Adds support for more character encodings than PHP’s built-in mb_convert_encoding() function, which Craft will take advantage of when converting strings to UTF-8.",
                 "ext-imagick": "Adds support for more image processing formats and options.",
@@ -595,7 +585,6 @@
                     "craft\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
@@ -606,7 +595,15 @@
                 "craftcms",
                 "yii2"
             ],
-            "time": "2019-06-04T17:37:55+00:00"
+            "support": {
+                "email": "support@craftcms.com",
+                "issues": "https://github.com/craftcms/cms/issues?state=open",
+                "forum": "https://craftcms.stackexchange.com/",
+                "source": "https://github.com/craftcms/cms",
+                "docs": "https://docs.craftcms.com/v3/",
+                "rss": "https://github.com/craftcms/cms/releases.atom"
+            },
+            "time": "2019-08-13T15:50:41+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
@@ -997,21 +994,16 @@
         },
         {
             "name": "egulias/email-validator",
-            "version": "2.1.9",
+            "version": "2.1.11",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/128cc721d771ec2c46ce59698f4ca42b73f71b25",
-                "reference": "128cc721d771ec2c46ce59698f4ca42b73f71b25",
+                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/92dd169c32f6f55ba570c309d83f5209cefb5e23",
+                "reference": "92dd169c32f6f55ba570c309d83f5209cefb5e23",
                 "shasum": ""
             },
             "require": {
                 "doctrine/lexer": "^1.0.1",
                 "php": ">= 5.5"
-            },
-            "require-dev": {
-                "dominicsayers/isemail": "dev-master",
-                "phpunit/phpunit": "^4.8.35||^5.7||^6.0",
-                "satooshi/php-coveralls": "^1.0.1"
             },
             "suggest": {
                 "ext-intl": "PHP Internationalization Libraries are required to use the SpoofChecking validation"
@@ -1019,7 +1011,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0.x-dev"
+                    "dev-master": "2.1.x-dev"
                 }
             },
             "autoload": {
@@ -1027,7 +1019,6 @@
                     "Egulias\\EmailValidator\\": "EmailValidator"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1045,7 +1036,7 @@
                 "validation",
                 "validator"
             ],
-            "time": "2019-06-23T10:14:27+00:00"
+            "time": "2019-08-13T17:33:27+00:00"
         },
         {
             "name": "elvanto/litemoji",
@@ -1279,18 +1270,15 @@
         },
         {
             "name": "ezyang/htmlpurifier",
-            "version": "v4.10.0",
+            "version": "v4.11.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ezyang/htmlpurifier/zipball/d85d39da4576a6934b72480be6978fb10c860021",
-                "reference": "d85d39da4576a6934b72480be6978fb10c860021",
+                "url": "https://api.github.com/repos/ezyang/htmlpurifier/zipball/83ab08bc1af7d808a9e0fbf024f1c24bfd73c0a7",
+                "reference": "83ab08bc1af7d808a9e0fbf024f1c24bfd73c0a7",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2"
-            },
-            "require-dev": {
-                "simpletest/simpletest": "^1.1"
             },
             "type": "library",
             "autoload": {
@@ -1301,9 +1289,8 @@
                     "library/HTMLPurifier.composer.php"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "LGPL"
+                "LGPL-2.1-or-later"
             ],
             "authors": [
                 {
@@ -1317,7 +1304,7 @@
             "keywords": [
                 "html"
             ],
-            "time": "2018-02-23T01:58:20+00:00"
+            "time": "2019-07-14T18:58:38+00:00"
         },
         {
             "name": "firebase/php-jwt",
@@ -3552,6 +3539,57 @@
             "time": "2019-08-06T15:37:35+00:00"
         },
         {
+            "name": "opis/closure",
+            "version": "3.3.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/opis/closure/zipball/92927e26d7fc3f271efe1f55bdbb073fbb2f0722",
+                "reference": "92927e26d7fc3f271efe1f55bdbb073fbb2f0722",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.4 || ^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Opis\\Closure\\": "src/"
+                },
+                "files": [
+                    "functions.php"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marius Sarca",
+                    "email": "marius.sarca@gmail.com"
+                },
+                {
+                    "name": "Sorin Sarca",
+                    "email": "sarca_sorin@hotmail.com"
+                }
+            ],
+            "description": "A library that can be used to serialize closures (anonymous functions) and arbitrary objects.",
+            "homepage": "https://opis.io/closure",
+            "keywords": [
+                "anonymous functions",
+                "closure",
+                "function",
+                "serializable",
+                "serialization",
+                "serialize"
+            ],
+            "time": "2019-07-09T21:58:11+00:00"
+        },
+        {
             "name": "paragonie/random_compat",
             "version": "v9.99.99",
             "dist": {
@@ -3698,19 +3736,15 @@
         },
         {
             "name": "pixelandtonic/imagine",
-            "version": "v0.7.1.3",
+            "version": "1.2.2.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pixelandtonic/Imagine/zipball/989656b05410446fde623540bbf83af15087e4ea",
-                "reference": "989656b05410446fde623540bbf83af15087e4ea",
+                "url": "https://api.github.com/repos/pixelandtonic/Imagine/zipball/c70db7d7f6bd6fb0abc7562bdabe51265af2518b",
+                "reference": "c70db7d7f6bd6fb0abc7562bdabe51265af2518b",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2"
-            },
-            "require-dev": {
-                "sami/sami": "^3.3",
-                "symfony/phpunit-bridge": "^3.2"
             },
             "suggest": {
                 "ext-gd": "to use the GD implementation",
@@ -3724,11 +3758,10 @@
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Imagine": "lib/"
+                "psr-4": {
+                    "Imagine\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3747,7 +3780,7 @@
                 "image manipulation",
                 "image processing"
             ],
-            "time": "2017-10-26T13:18:33+00:00"
+            "time": "2019-07-19T12:55:50+00:00"
         },
         {
             "name": "psr/cache",
@@ -5095,11 +5128,11 @@
         },
         {
             "name": "symfony/polyfill-iconv",
-            "version": "v1.11.0",
+            "version": "v1.12.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-iconv/zipball/f037ea22acfaee983e271dd9c3b8bb4150bd8ad7",
-                "reference": "f037ea22acfaee983e271dd9c3b8bb4150bd8ad7",
+                "url": "https://api.github.com/repos/symfony/polyfill-iconv/zipball/685968b11e61a347c18bf25db32effa478be610f",
+                "reference": "685968b11e61a347c18bf25db32effa478be610f",
                 "shasum": ""
             },
             "require": {
@@ -5111,7 +5144,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.11-dev"
+                    "dev-master": "1.12-dev"
                 }
             },
             "autoload": {
@@ -5122,7 +5155,6 @@
                     "bootstrap.php"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -5145,15 +5177,15 @@
                 "portable",
                 "shim"
             ],
-            "time": "2019-02-06T07:57:58+00:00"
+            "time": "2019-08-06T08:03:45+00:00"
         },
         {
             "name": "symfony/polyfill-intl-idn",
-            "version": "v1.11.0",
+            "version": "v1.12.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-intl-idn/zipball/c766e95bec706cdd89903b1eda8afab7d7a6b7af",
-                "reference": "c766e95bec706cdd89903b1eda8afab7d7a6b7af",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-idn/zipball/6af626ae6fa37d396dc90a399c0ff08e5cfc45b2",
+                "reference": "6af626ae6fa37d396dc90a399c0ff08e5cfc45b2",
                 "shasum": ""
             },
             "require": {
@@ -5167,7 +5199,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.9-dev"
+                    "dev-master": "1.12-dev"
                 }
             },
             "autoload": {
@@ -5178,18 +5210,17 @@
                     "bootstrap.php"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "authors": [
                 {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                },
-                {
                     "name": "Laurent Bassin",
                     "email": "laurent@bassin.info"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
                 }
             ],
             "description": "Symfony polyfill for intl's idn_to_ascii and idn_to_utf8 functions",
@@ -5202,7 +5233,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2019-03-04T13:44:35+00:00"
+            "time": "2019-08-06T08:03:45+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -6098,11 +6129,11 @@
         },
         {
             "name": "yii2tech/ar-softdelete",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yii2tech/ar-softdelete/zipball/3e29cb1865a7df66de42f6f888b99d2797a80204",
-                "reference": "3e29cb1865a7df66de42f6f888b99d2797a80204",
+                "url": "https://api.github.com/repos/yii2tech/ar-softdelete/zipball/498ed03f89ded835f0ca156ec50d432191c58769",
+                "reference": "498ed03f89ded835f0ca156ec50d432191c58769",
                 "shasum": ""
             },
             "require": {
@@ -6119,7 +6150,6 @@
                     "yii2tech\\ar\\softdelete\\": "src"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -6139,15 +6169,15 @@
                 "soft",
                 "yii2"
             ],
-            "time": "2019-01-25T15:57:39+00:00"
+            "time": "2019-07-30T11:05:57+00:00"
         },
         {
             "name": "yiisoft/yii2",
-            "version": "2.0.19",
+            "version": "2.0.21",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/3e74c7338dd83cea6ffc6f5c25202b9f2f271f89",
-                "reference": "3e74c7338dd83cea6ffc6f5c25202b9f2f271f89",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/7e4622252c5f272373e1339a47d331e4a55e9591",
+                "reference": "7e4622252c5f272373e1339a47d331e4a55e9591",
                 "shasum": ""
             },
             "require": {
@@ -6177,7 +6207,6 @@
                     "yii\\": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -6234,22 +6263,19 @@
                 "framework",
                 "yii2"
             ],
-            "time": "2019-05-21T16:01:16+00:00"
+            "time": "2019-06-18T14:25:08+00:00"
         },
         {
             "name": "yiisoft/yii2-composer",
-            "version": "2.0.7",
+            "version": "2.0.8",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-composer/zipball/1439e78be1218c492e6cde251ed87d3f128b9534",
-                "reference": "1439e78be1218c492e6cde251ed87d3f128b9534",
+                "url": "https://api.github.com/repos/yiisoft/yii2-composer/zipball/5c7ca9836cf80b34db265332a7f2f8438eb469b9",
+                "reference": "5c7ca9836cf80b34db265332a7f2f8438eb469b9",
                 "shasum": ""
             },
             "require": {
                 "composer-plugin-api": "^1.0"
-            },
-            "require-dev": {
-                "composer/composer": "^1.0"
             },
             "type": "composer-plugin",
             "extra": {
@@ -6263,7 +6289,6 @@
                     "yii\\composer\\": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -6283,26 +6308,22 @@
                 "extension installer",
                 "yii2"
             ],
-            "time": "2018-07-05T15:44:47+00:00"
+            "time": "2019-07-16T13:22:30+00:00"
         },
         {
             "name": "yiisoft/yii2-debug",
-            "version": "2.1.5",
+            "version": "2.1.7",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/a6bbf55093e154e2eeb2c778af8717989495270e",
-                "reference": "a6bbf55093e154e2eeb2c778af8717989495270e",
+                "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/c54717af9172cf6233fea3eec113c0e0293e2bb2",
+                "reference": "c54717af9172cf6233fea3eec113c0e0293e2bb2",
                 "shasum": ""
             },
             "require": {
                 "ext-mbstring": "*",
+                "opis/closure": "^3.3",
                 "php": ">=5.4",
                 "yiisoft/yii2": "~2.0.13"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "<7",
-                "yiisoft/yii2-coding-standards": "~2.0",
-                "yiisoft/yii2-swiftmailer": "*"
             },
             "type": "yii2-extension",
             "extra": {
@@ -6315,7 +6336,6 @@
                     "yii\\debug\\": "src"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -6335,7 +6355,7 @@
                 "debugger",
                 "yii2"
             ],
-            "time": "2019-06-04T14:21:49+00:00"
+            "time": "2019-07-30T12:40:16+00:00"
         },
         {
             "name": "yiisoft/yii2-queue",
