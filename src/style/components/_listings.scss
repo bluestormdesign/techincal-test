@@ -62,9 +62,7 @@
     -webkit-transition: background-color 0.5s; /* For Safari 3.1 to 6.0 */
     transition: background-color 0.5s;
 
-    @media only screen
-    and (min-width : 375px)
-    and (max-width : 667px) {
+    @media only screen and (min-width: 375px) and (max-width: 667px) {
         margin-bottom: 7px;
     }
 
@@ -80,9 +78,7 @@
         img {
             width: 100%;
 
-            @media only screen
-            and (min-width : 375px)
-            and (max-width : 667px) {
+            @media only screen and (min-width: 375px) and (max-width: 667px) {
                 margin-bottom: 15px;
             }
 

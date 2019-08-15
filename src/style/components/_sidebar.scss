@@ -12,9 +12,9 @@ aside {
         }
     }
 
-     > ul li a,
-     > ul li > ul li a,
-     > ul li.current > ul li a {
+    > ul li a,
+    > ul li > ul li a,
+    > ul li.current > ul li a {
         color: $text-color;
 
         &:hover {

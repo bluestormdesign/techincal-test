@@ -61,10 +61,10 @@ div#overlay-menu {
         padding: 135px 0;
     }
 
-  ul.address {
-    list-style-type: none;
-    padding: 0;
-  }
+    ul.address {
+        list-style-type: none;
+        padding: 0;
+    }
 
     a#overlay-menu-close {
         color: #fff;
@@ -99,12 +99,12 @@ div#overlay-menu {
     nav {
         margin-bottom: 30px;
 
-         > ul {
+        > ul {
             list-style: none;
             margin: 0;
             padding: 0;
 
-             > li > a {
+            > li > a {
                 border-bottom: 1px solid rgba(255, 255, 255, .3);
                 color: #fff;
                 font-size: 2rem;
@@ -115,13 +115,13 @@ div#overlay-menu {
                 }
             }
 
-             > li > ul {
+            > li > ul {
                 display: none;
                 list-style: none;
                 margin: 0;
                 padding: 10px 0 0 20px;
 
-                 > li > a {
+                > li > a {
                     color: #fff;
                     padding: 5px 0;
 

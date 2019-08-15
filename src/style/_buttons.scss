@@ -1,10 +1,10 @@
 .btn {
-	i {
-		float: right;
-		margin: 7px 0 0 15px;
-	}
-	
-	&.btn-secondary {
-		@include button-variant(#fff, $brand-secondary, transparent);
-	}
+    i {
+        float: right;
+        margin: 7px 0 0 15px;
+    }
+
+    &.btn-secondary {
+        @include button-variant(#fff, $brand-secondary, transparent);
+    }
 }

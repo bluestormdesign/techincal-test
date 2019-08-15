@@ -35,7 +35,7 @@ body.high-contrast-body {
         background-color: $yellow;
 
         a {
-            color: #000!important;
+            color: #000 !important;
         }
     }
 
@@ -48,7 +48,7 @@ body.high-contrast-body {
     #nav-main {
         li {
             a {
-                color: $yellow!important;
+                color: $yellow !important;
             }
         }
     }
@@ -62,14 +62,14 @@ body.high-contrast-body {
             color: $yellow;
         }
     }
-    
+
     .fa-inverse {
         color: #000;
     }
 
     #bluestorm {
         a {
-            color: $yellow!important;
+            color: $yellow !important;
         }
     }
 

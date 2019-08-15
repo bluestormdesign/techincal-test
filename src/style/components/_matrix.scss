@@ -168,7 +168,7 @@ div.accordions {
         &.open {
             margin-bottom: 0;
 
-             + div.accordion {
+            + div.accordion {
                 display: block;
             }
 
@@ -243,11 +243,11 @@ a.callout:hover {
 }
 
 .callout-three-more {
-    height: 360px!important;
+    height: 360px !important;
 
     .callout-title {
-        top: 110px!important;
-        font-size: 27px!important;
+        top: 110px !important;
+        font-size: 27px !important;
     }
 
 }
@@ -268,7 +268,7 @@ a.callout:hover {
 }
 
 .callouts-slider {
-    max-width: 100%!important;
+    max-width: 100% !important;
 }
 
 .videoPlayerFullWidth {
@@ -303,6 +303,7 @@ a.callout:hover {
             opacity: 1;
             transform: scale(1);
         }
+
         &.mfp-bg {
             opacity: 0.8;
         }
@@ -315,6 +316,7 @@ a.callout:hover {
             transform: scale(0.8);
             opacity: 0;
         }
+
         &.mfp-bg {
             opacity: 0;
         }
