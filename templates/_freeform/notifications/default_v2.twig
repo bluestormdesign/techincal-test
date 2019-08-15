@@ -8,300 +8,504 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>{{ siteName }}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>{{ siteName }}</title>
 
-  <style type="text/css">
-    /* Client-specific Styles */
-    #outlook a {padding:0;} /* Force Outlook to provide a "view in browser" menu link. */
-    body{width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0; background-color: #fbfbfb;
-    }
-    /* Prevent Webkit and Windows Mobile platforms from changing default font sizes, while not breaking desktop design. */
-    .ExternalClass {width:100%;} /* Force Hotmail to display emails at full width */
-    .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;} /* Force Hotmail to display normal line spacing.*/
-    #backgroundTable {margin:0; padding:0; width:100% !important; line-height: 100% !important;}
-    img {outline:none; text-decoration:none;border:none; -ms-interpolation-mode: bicubic;}
-    a img {border:none;}
-    .image_fix {display:block;}
-    p {margin: 0px 0px !important;}
-    table, td {border-collapse: collapse; mso-table-lspace:0 !important; mso-table-rspace:0 !important;}
-    a {color: #0a8cce;text-decoration: none;text-decoration:none!important;}
-    /*STYLES*/
-    table[class=full] { width: 100%; clear: both; }
-    /*IPAD STYLES*/
-    @media only screen and (max-width: 640px) {
-      a[href^="tel"], a[href^="sms"] {
-        text-decoration: none;
-        color: #0a8cce; /* or whatever your want */
-        pointer-events: none;
-        cursor: default;
-      }
-      .mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
-        text-decoration: default;
-        color: #0a8cce !important;
-        pointer-events: auto;
-        cursor: default;
-      }
-      table[class=devicewidth] {width: 440px!important;text-align:center!important;}
-      table[class=devicewidthinner] {width: 420px!important;text-align:center!important;}
-      img[class=banner] {max-width: 100%;!important; height: auto !important }
-      img[class=colimg2] {width: 440px!important;height:220px!important;}
+    <style type="text/css">
+        /* Client-specific Styles */
+        #outlook a {
+            padding: 0;
+        }
+
+        /* Force Outlook to provide a "view in browser" menu link. */
+        body {
+            width: 100% !important;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #fbfbfb;
+        }
+
+        /* Prevent Webkit and Windows Mobile platforms from changing default font sizes, while not breaking desktop design. */
+        .ExternalClass {
+            width: 100%;
+        }
+
+        /* Force Hotmail to display emails at full width */
+        .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {
+            line-height: 100%;
+        }
+
+        /* Force Hotmail to display normal line spacing.*/
+        #backgroundTable {
+            margin: 0;
+            padding: 0;
+            width: 100% !important;
+            line-height: 100% !important;
+        }
+
+        img {
+            outline: none;
+            text-decoration: none;
+            border: none;
+            -ms-interpolation-mode: bicubic;
+        }
+
+        a img {
+            border: none;
+        }
+
+        .image_fix {
+            display: block;
+        }
+
+        p {
+            margin: 0px 0px !important;
+        }
+
+        table, td {
+            border-collapse: collapse;
+            mso-table-lspace: 0 !important;
+            mso-table-rspace: 0 !important;
+        }
+
+        a {
+            color: #0a8cce;
+            text-decoration: none;
+            text-decoration: none !important;
+        }
+
+        /*STYLES*/
+        table[class=full] {
+            width: 100%;
+            clear: both;
+        }
+
+        /*IPAD STYLES*/
+        @media only screen and (max-width: 640px) {
+            a[href^="tel"], a[href^="sms"] {
+                text-decoration: none;
+                color: #0a8cce; /* or whatever your want */
+                pointer-events: none;
+                cursor: default;
+            }
+
+            .mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+                text-decoration: default;
+                color: #0a8cce !important;
+                pointer-events: auto;
+                cursor: default;
+            }
+
+            table[class=devicewidth] {
+                width: 440px !important;
+                text-align: center !important;
+            }
+
+            table[class=devicewidthinner] {
+                width: 420px !important;
+                text-align: center !important;
+            }
+
+            img[class=banner] {
+                max-width: 100%;
+            !important;
+                height: auto !important
+            }
+
+            img[class=colimg2] {
+                width: 440px !important;
+                height: 220px !important;
+            }
 
 
-    }
-    /*IPHONE STYLES*/
-    @media only screen and (max-width: 480px) {
-      a[href^="tel"], a[href^="sms"] {
-        text-decoration: none;
-        color: #0a8cce; /* or whatever your want */
-        pointer-events: none;
-        cursor: default;
-      }
-      .mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
-        text-decoration: default;
-        color: #0a8cce !important;
-        pointer-events: auto;
-        cursor: default;
-      }
-      table[class=devicewidth] {width: 350px!important;text-align:center!important;}
-      table[class=deviceinner] {width: 330px!important;text-align:center!important;}
-      img[class=banner] {max-width: 100%;!important; height: auto !important }
-      img[class=spacer] {width: 330px!important; height: 5px!important;}
-      img[class=colimg2] {max-width: 100%;!important; height: auto !important margin-bottom: 15px !important;}
-      td[class=mobile-hide]{display:none!important;}
-      td[class=right] {text-align:center!important; padding-right:0!important;}
-      td[class=left] {text-align:center!important; padding-left:0!important;}
-      span[class=numbers] {width: 330px!important;text-align:center!important;display: block!important;}
-      td[class=hide] {display: none!important;}
+        }
 
-    }
+        /*IPHONE STYLES*/
+        @media only screen and (max-width: 480px) {
+            a[href^="tel"], a[href^="sms"] {
+                text-decoration: none;
+                color: #0a8cce; /* or whatever your want */
+                pointer-events: none;
+                cursor: default;
+            }
 
-    /*IPHONE 6 STYLES*/
-    @media only screen and (max-width: 375px) {
-      a[href^="tel"], a[href^="sms"] {
-        text-decoration: none;
-        color: #0a8cce; /* or whatever your want */
-        pointer-events: none;
-        cursor: default;
-      }
-      .mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
-        text-decoration: default;
-        color: #0a8cce !important;
-        pointer-events: auto;
-        cursor: default;
-      }
-      table[class=devicewidth] {width: 350px!important;text-align:center!important;}
-      table[class=deviceinner] {width: 330px!important;text-align:center!important;}
-      img[class=banner] {max-width: 100%;!important; height: auto !important }
-      img[class=spacer] {width: 330px!important; height: 5px!important;}
-      img[class=colimg2] {max-width: 100%;!important; height: auto !important margin-bottom: 15px !important;}
-      td[class=mobile-hide]{display:none!important;}
-      td[class=right] {text-align:center!important; padding-right:0!important;}
-      td[class=left] {text-align:center!important; padding-left:0!important;}
-      span[class=numbers] {width: 330px!important;text-align:center!important;display: block!important;}
-      td[class=hide] {display: none!important;}
+            .mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+                text-decoration: default;
+                color: #0a8cce !important;
+                pointer-events: auto;
+                cursor: default;
+            }
 
-    }
+            table[class=devicewidth] {
+                width: 350px !important;
+                text-align: center !important;
+            }
 
-    /*IPHONE 5s below STYLES*/
-    @media only screen and (max-width: 320px) {
-      a[href^="tel"], a[href^="sms"] {
-        text-decoration: none;
-        color: #ffffff;
-        pointer-events: none;
-        cursor: default;
-      }
-      table[class=devicewidth] {width: 300px!important;text-align:center!important;}
-      table[class=deviceinner] {width: 280px!important;text-align:center!important;}
-      img[class=banner] {max-width: 100%;!important; height: auto !important }
-      img[class=spacer] {width: 300px!important; height: 5px!important;}
-      img[class=colimg2] {max-width: 100%;!important; height: auto !important margin-bottom: 15px !important;}
-      td[class=mobile-hide]{display:none!important;}
-      td[class=right] {text-align:center!important; padding-right:0!important;}
-      td[class=left] {text-align:center!important; padding-left:0!important;}
-      span[class=numbers] {width: 280px!important;text-align:center!important;display: block!important;}
-      td[class=hide] {display: none!important;}
-    }
+            table[class=deviceinner] {
+                width: 330px !important;
+                text-align: center !important;
+            }
 
-  </style>
+            img[class=banner] {
+                max-width: 100%;
+            !important;
+                height: auto !important
+            }
+
+            img[class=spacer] {
+                width: 330px !important;
+                height: 5px !important;
+            }
+
+            img[class=colimg2] {
+                max-width: 100%;
+            !important;
+                height: auto !important
+                margin-bottom: 15px !important;
+            }
+
+            td[class=mobile-hide] {
+                display: none !important;
+            }
+
+            td[class=right] {
+                text-align: center !important;
+                padding-right: 0 !important;
+            }
+
+            td[class=left] {
+                text-align: center !important;
+                padding-left: 0 !important;
+            }
+
+            span[class=numbers] {
+                width: 330px !important;
+                text-align: center !important;
+                display: block !important;
+            }
+
+            td[class=hide] {
+                display: none !important;
+            }
+
+        }
+
+        /*IPHONE 6 STYLES*/
+        @media only screen and (max-width: 375px) {
+            a[href^="tel"], a[href^="sms"] {
+                text-decoration: none;
+                color: #0a8cce; /* or whatever your want */
+                pointer-events: none;
+                cursor: default;
+            }
+
+            .mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+                text-decoration: default;
+                color: #0a8cce !important;
+                pointer-events: auto;
+                cursor: default;
+            }
+
+            table[class=devicewidth] {
+                width: 350px !important;
+                text-align: center !important;
+            }
+
+            table[class=deviceinner] {
+                width: 330px !important;
+                text-align: center !important;
+            }
+
+            img[class=banner] {
+                max-width: 100%;
+            !important;
+                height: auto !important
+            }
+
+            img[class=spacer] {
+                width: 330px !important;
+                height: 5px !important;
+            }
+
+            img[class=colimg2] {
+                max-width: 100%;
+            !important;
+                height: auto !important
+                margin-bottom: 15px !important;
+            }
+
+            td[class=mobile-hide] {
+                display: none !important;
+            }
+
+            td[class=right] {
+                text-align: center !important;
+                padding-right: 0 !important;
+            }
+
+            td[class=left] {
+                text-align: center !important;
+                padding-left: 0 !important;
+            }
+
+            span[class=numbers] {
+                width: 330px !important;
+                text-align: center !important;
+                display: block !important;
+            }
+
+            td[class=hide] {
+                display: none !important;
+            }
+
+        }
+
+        /*IPHONE 5s below STYLES*/
+        @media only screen and (max-width: 320px) {
+            a[href^="tel"], a[href^="sms"] {
+                text-decoration: none;
+                color: #ffffff;
+                pointer-events: none;
+                cursor: default;
+            }
+
+            table[class=devicewidth] {
+                width: 300px !important;
+                text-align: center !important;
+            }
+
+            table[class=deviceinner] {
+                width: 280px !important;
+                text-align: center !important;
+            }
+
+            img[class=banner] {
+                max-width: 100%;
+            !important;
+                height: auto !important
+            }
+
+            img[class=spacer] {
+                width: 300px !important;
+                height: 5px !important;
+            }
+
+            img[class=colimg2] {
+                max-width: 100%;
+            !important;
+                height: auto !important
+                margin-bottom: 15px !important;
+            }
+
+            td[class=mobile-hide] {
+                display: none !important;
+            }
+
+            td[class=right] {
+                text-align: center !important;
+                padding-right: 0 !important;
+            }
+
+            td[class=left] {
+                text-align: center !important;
+                padding-left: 0 !important;
+            }
+
+            span[class=numbers] {
+                width: 280px !important;
+                text-align: center !important;
+                display: block !important;
+            }
+
+            td[class=hide] {
+                display: none !important;
+            }
+        }
+
+    </style>
 </head>
 <body>
 <!-- Start of preheader -->
-<table width="100%" bgcolor="#fbfbfb" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="preheader" >
-  <tbody>
-  <tr>
-    <td>
-      <table width="670" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
-        <tbody>
-        <tr>
-          <td width="100%">
+<table width="100%" bgcolor="#fbfbfb" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="preheader">
+    <tbody>
+    <tr>
+        <td>
             <table width="670" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
-              <tbody>
-              <!-- Spacing -->
-              <tr>
-                <td width="100%" height="10"></td>
-              </tr>
-              <!-- Spacing -->
-              <tr>
-                <td>
+                <tbody>
+                <tr>
+                    <td width="100%">
+                        <table width="670" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                            <tbody>
+                            <!-- Spacing -->
+                            <tr>
+                                <td width="100%" height="10"></td>
+                            </tr>
+                            <!-- Spacing -->
+                            <tr>
+                                <td>
 
-                  <table width="100" align="right" border="0" cellpadding="0" cellspacing="0">
-                    <tbody>
-                    <tr>
-                      <td align="left" valign="middle" style="font-family:Helvetica, Arial, sans-serif; font-size: 14px;color: #666666" st-content="viewonline" class="mobile-hide">
-                        <!--<a href="#" style="text-decoration: none; color: #666666">View Online </a> -->
-                      </td>
-                    </tr>
-                    </tbody>
-                  </table>
+                                    <table width="100" align="right" border="0" cellpadding="0" cellspacing="0">
+                                        <tbody>
+                                        <tr>
+                                            <td align="left" valign="middle" style="font-family:Helvetica, Arial, sans-serif; font-size: 14px;color: #666666" st-content="viewonline" class="mobile-hide">
+                                                <!--<a href="#" style="text-decoration: none; color: #666666">View Online </a> -->
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
 
-                </td>
-              </tr>
-              <!-- Spacing -->
-              <tr>
-                <td width="100%" height="10"></td>
-              </tr>
-              <!-- Spacing -->
-              </tbody>
+                                </td>
+                            </tr>
+                            <!-- Spacing -->
+                            <tr>
+                                <td width="100%" height="10"></td>
+                            </tr>
+                            <!-- Spacing -->
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </tbody>
             </table>
-          </td>
-        </tr>
-        </tbody>
-      </table>
-    </td>
-  </tr>
-  </tbody>
+        </td>
+    </tr>
+    </tbody>
 </table>
 <!-- End of preheader -->
 <!-- Start of header -->
 <table width="100%" bgcolor="#fbfbfb" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="header">
-  <tbody>
-  <tr>
-    <td>
-      <table width="670" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth" bgcolor="#ffffff" style="border: 1px solid #e9e9e9;">
-        <tbody>
-        <tr>
-          <td width="100%">
-            <table width="670" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth" >
-              <tbody>
-              <!-- Spacing -->
-              <tr>
-                <td height="20" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
-              </tr>
-              <tr>
-                <td>
-                  <table width="200" align="left" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
-                    <tr>
-                      <td align="left" style="margin-top: 0;font-style: normal;font-weight: 200;line-height: 24px;margin-bottom: 23px;font-family:Helvetica, Arial, sans-serif; color: #565656; padding-left: 20px; padding-right: 20px;">
-                        <a href="{{ siteUrl }}">
-                          <img width="200px" src="{{ siteUrl }}skin/logo.png" />
-                        </a>
-                        <br/>
-                        <br/>
-                      </td>
-                    </tr>
-                  </table>
+    <tbody>
+    <tr>
+        <td>
+            <table width="670" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth" bgcolor="#ffffff" style="border: 1px solid #e9e9e9;">
+                <tbody>
+                <tr>
+                    <td width="100%">
+                        <table width="670" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                            <tbody>
+                            <!-- Spacing -->
+                            <tr>
+                                <td height="20" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">
+                                    &nbsp;
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table width="200" align="left" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
+                                        <tr>
+                                            <td align="left" style="margin-top: 0;font-style: normal;font-weight: 200;line-height: 24px;margin-bottom: 23px;font-family:Helvetica, Arial, sans-serif; color: #565656; padding-left: 20px; padding-right: 20px;">
+                                                <a href="{{ siteUrl }}">
+                                                    <img width="200px" src="{{ siteUrl }}skin/logo.png"/>
+                                                </a>
+                                                <br/>
+                                                <br/>
+                                            </td>
+                                        </tr>
+                                    </table>
 
-                </td>
-              </tr>
-              <!-- Spacing -->
-              <tr>
-                <td>
-                  <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
-                    <tr>
-                      <td align="left" style="margin-top: 0;font-style: normal;font-weight: 200;line-height: 24px;margin-bottom: 23px;font-family:Helvetica, Arial, sans-serif;; color: #565656; padding-left: 20px; padding-right: 20px;">
+                                </td>
+                            </tr>
+                            <!-- Spacing -->
+                            <tr>
+                                <td>
+                                    <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
+                                        <tr>
+                                            <td align="left" style="margin-top: 0;font-style: normal;font-weight: 200;line-height: 24px;margin-bottom: 23px;font-family:Helvetica, Arial, sans-serif;; color: #565656; padding-left: 20px; padding-right: 20px;">
 
-                        <p>Submitted: {{ dateCreated|date('jS F Y H:i:s a') }}</p>
-                        <br><br>
+                                                <p>Submitted: {{ dateCreated|date('jS F Y H:i:s a') }}</p>
+                                                <br><br>
 
-                        {% for page in form.pages %}
-                          {% if form.pages|length > 1 %}
-                            <h2>{{ page.label }}</h2>
-                          {% endif %}
+                                                {% for page in form.pages %}
+                                                    {% if form.pages|length > 1 %}
+                                                        <h2>{{ page.label }}</h2>
+                                                    {% endif %}
 
-                          {% for row in page %}
-                            {% for field in row %}
-                              {% if field.label not in ['Submit', 'HTML'] %}
-                                <p>
-                                  <strong>{{ field.label }}</strong><br>
-                                  {% if field.label == 'Course you are interested in ?' and field.valueAsString is empty %}
-                                    Other
-                                  {% else %}
-                                    {{ field.valueAsString }}
-                                  {% endif %}
-                                  <br><br>
-                                </p>
-                              {% endif %}
-                            {% endfor %}
-                          {% endfor %}
-                        {% endfor %}
+                                                    {% for row in page %}
+                                                        {% for field in row %}
+                                                            {% if field.label not in ['Submit', 'HTML'] %}
+                                                                <p>
+                                                                    <strong>{{ field.label }}</strong><br>
+                                                                    {% if field.label == 'Course you are interested in ?' and field.valueAsString is empty %}
+                                                                        Other
+                                                                    {% else %}
+                                                                        {{ field.valueAsString }}
+                                                                    {% endif %}
+                                                                    <br><br>
+                                                                </p>
+                                                            {% endif %}
+                                                        {% endfor %}
+                                                    {% endfor %}
+                                                {% endfor %}
 
-                        <p>
-                          Best regards<br>
-                        </p>
+                                                <p>
+                                                    Best regards<br>
+                                                </p>
 
-                        <br>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
+                                                <br>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
 
-              </tbody>
+                            </tbody>
+                        </table>
+
+
+                    </td>
+                </tr>
+                </tbody>
             </table>
-
-
-          </td>
-        </tr>
-        </tbody>
-      </table>
-    </td>
-  </tr>
-  </tbody>
+        </td>
+    </tr>
+    </tbody>
 </table>
 <!-- End of Header -->
 
 
 <!-- Start of Postfooter -->
-<table width="100%" bgcolor="#fbfbfb" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="postfooter" >
-  <tbody>
-  <tr>
-    <td>
-      <table width="670" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
-        <tbody>
-        <tr>
-          <td width="100%">
+<table width="100%" bgcolor="#fbfbfb" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="postfooter">
+    <tbody>
+    <tr>
+        <td>
             <table width="670" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
-              <tbody>
-              <!-- Spacing -->
-              <tr>
-                <td width="100%" height="20"></td>
-              </tr>
-              <!-- Spacing -->
-              <tr>
-                <td align="center" valign="middle" style="font-family:Helvetica, Arial, sans-serif; color:#000; font-size:10px" st-content="postfooter">
-                  {% block footer %}
-                    Get in touch: {{ seomatic.site.creator.genericTelephone }}<br>
-                    {{ seomatic.site.creator.genericStreetAddress }}, {{ seomatic.site.creator.genericAddressLocality }}, {{ seomatic.site.creator.genericAddressRegion }} {{ seomatic.site.creator.genericPostalCode }}, {{ seomatic.site.creator.genericAddressCountry }}<br>
-                    <a href="{{ seomatic.site.creator.genericEmail }}">{{ seomatic.site.creator.genericEmail }}</a>
-                  {% endblock %}
-                </td>
-              </tr>
-              <!-- Spacing -->
-              <tr>
-                <td width="100%" height="20"></td>
-              </tr>
-              <!-- Spacing -->
-              </tbody>
+                <tbody>
+                <tr>
+                    <td width="100%">
+                        <table width="670" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                            <tbody>
+                            <!-- Spacing -->
+                            <tr>
+                                <td width="100%" height="20"></td>
+                            </tr>
+                            <!-- Spacing -->
+                            <tr>
+                                <td align="center" valign="middle" style="font-family:Helvetica, Arial, sans-serif; color:#000; font-size:10px" st-content="postfooter">
+                                    {% block footer %}
+                                        Get in touch: {{ seomatic.site.creator.genericTelephone }}<br>
+                                        {{ seomatic.site.creator.genericStreetAddress }}, {{ seomatic.site.creator.genericAddressLocality }}, {{ seomatic.site.creator.genericAddressRegion }} {{ seomatic.site.creator.genericPostalCode }}, {{ seomatic.site.creator.genericAddressCountry }}
+                                        <br>
+                                        <a href="{{ seomatic.site.creator.genericEmail }}">{{ seomatic.site.creator.genericEmail }}</a>
+                                    {% endblock %}
+                                </td>
+                            </tr>
+                            <!-- Spacing -->
+                            <tr>
+                                <td width="100%" height="20"></td>
+                            </tr>
+                            <!-- Spacing -->
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                </tbody>
             </table>
-          </td>
-        </tr>
-        </tbody>
-      </table>
-    </td>
-  </tr>
-  </tbody>
+        </td>
+    </tr>
+    </tbody>
 </table>
 <!-- End of postfooter -->
 

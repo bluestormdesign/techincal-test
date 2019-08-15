@@ -1,7 +1,7 @@
 {% set children = entry.children.showInNavigation(true) %}
 
 <div class="row row-flex">
-	{% for child in children %}
-		{% include '_partials/listing-card' with { entry: child } %}
-	{% endfor %}
+    {% for child in children.all() %}
+        {% include '_partials/listing-card' with { entry: child } %}
+    {% endfor %}
 </div>

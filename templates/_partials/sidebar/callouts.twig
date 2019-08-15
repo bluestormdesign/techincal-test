@@ -1,10 +1,10 @@
 {% cache %}
-	{% if entry is defined %}
-		{% set callouts = craft.entries.relatedTo(entry) %}
-		{% set callouts = callouts|merge(craft.entries.section('callouts').calloutShowOnListings('*' ~ entry.section.handle ~ '*')) %}
+    {% if entry is defined %}
+        {% set callouts = craft.entries.relatedTo(entry) %}
+        {% set callouts = callouts|merge(craft.entries.section('callouts').calloutShowOnListings('*' ~ entry.section.handle ~ '*')) %}
 
-		{% for callout in callouts %}
-			{% include '_partials/callout' with { entry: callout } %}
-		{% endfor %}
-	{% endif %}
+        {% for callout in callouts %}
+            {% include '_partials/callout' with { entry: callout } %}
+        {% endfor %}
+    {% endif %}
 {% endcache %}

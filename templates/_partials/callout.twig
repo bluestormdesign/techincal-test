@@ -1,10 +1,10 @@
 {% import '_includes/utils' as utils %}
 
 <a href="{{ entry.calloutRedirect.url }}" class="callout callout-{{ callout.type|replace('Callout', '') }}" title="This will take you to {{ entry.title }}" onclick="recordEvent('Callouts', 'Click', '{{ entry.title }} ({{ entry.calloutRedirect.url }})');">
-	{% if entry.calloutImage|length %}
-		{{ utils.responsiveImage(entry.calloutImage.first, 4/3, entry.calloutImage.first.title, { class: 'img-responsive' }) }}
-	{% else %}
-		<h3>{{ entry.title }}</h3>
-		<p>{{ entry.calloutText }}</p>
-	{% endif %}
+    {% if entry.calloutImage|length %}
+        {{ utils.responsiveImage(entry.calloutImage.one, 4/3, entry.calloutImage.one.title, { class: 'img-responsive' }) }}
+    {% else %}
+        <h3>{{ entry.title }}</h3>
+        <p>{{ entry.calloutText }}</p>
+    {% endif %}
 </a>

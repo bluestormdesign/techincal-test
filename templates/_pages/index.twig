@@ -1,5 +1,5 @@
 {% if entry.templateSelect is not null and entry.templateSelect %}
-	{% include entry.templateSelect %}
+    {% include entry.templateSelect %}
 {% else %}
-	{% include [ '_pages/' ~ entry.type, '_pages/page' ] %}
+    {% include [ '_pages/' ~ entry.type, '_pages/page' ] %}
 {% endif %}

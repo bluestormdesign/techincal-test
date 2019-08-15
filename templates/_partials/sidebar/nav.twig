@@ -1,26 +1,27 @@
 {% cache %}
-	{% set topLevelEntry = craft.entries.slug(craft.request.getSegment(1)).first() %}
+    {% set topLevelEntry = craft.entries.slug(craft.request.getSegment(1)).one() %}
 
-	{% if topLevelEntry %}
-		{% set subnav = craft.entries.descendantOf(topLevelEntry).showInNavigation(true) %}
+    {% if topLevelEntry %}
+        {% set subnav = craft.entries.descendantOf(topLevelEntry).showInNavigation(true) %}
 
-		{% if subnav|length %}
-			<nav class="sidenav">
-				<h2>{{ topLevelEntry.title }}</h2>
+        {% if subnav|length %}
+            <nav class="sidenav">
+                <h2>{{ topLevelEntry.title }}</h2>
 
-				<ul>
-					{% nav page in subnav %}
-						<li class="{{ entry is defined and page.id == entry.id ? 'current' : ((entry is defined and page.isParentOf(entry)) or craft.bluestorm.getListingParent(entry) == page ? 'parent-current') }}">
-							<a href="{{ page.redirect ? page.redirect.url : page.url }}"><i class="far fa-fw fa-angle-right"></i> {{ page.title }}</a>
-							{% ifchildren %}
-								<ul>
-									{% children %}
-								</ul>
-							{% endifchildren %}
-						</li>
-					{% endnav %}
-				</ul>
-			</nav>
-		{% endif %}
-	{% endif %}
+                <ul>
+                    {% nav page in subnav %}
+                        <li class="{{ entry is defined and page.id == entry.id ? 'current' : ((entry is defined and page.isParentOf(entry)) or craft.bluestorm.getListingParent(entry) == page ? 'parent-current') }}">
+                            <a href="{{ page.redirect ? page.redirect.url : page.url }}"><i class="far fa-fw fa-angle-right"></i> {{ page.title }}
+                            </a>
+                            {% ifchildren %}
+                                <ul>
+                                    {% children %}
+                                </ul>
+                            {% endifchildren %}
+                        </li>
+                    {% endnav %}
+                </ul>
+            </nav>
+        {% endif %}
+    {% endif %}
 {% endcache %}

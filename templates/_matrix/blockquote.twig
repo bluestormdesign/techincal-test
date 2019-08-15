@@ -5,14 +5,14 @@
 {% if block.quote is defined and block.quote|length %}
     {% if block.image is defined and block.image|length %}
         {% set image = block.image %}
-            <div class="col-md-12 blockquote" {% if image is defined and image|length %}style="background:linear-gradient(to bottom, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.4) 100%), url({{ image.one.getUrl }}); background-position: center; background-size: cover; background-repeat: no-repeat; padding: 80px 40px;"{% endif %}>
-                <div class="blockquote_quote" {% if image is defined and image|length %}style="color: #fff;"{% endif %}>
-                    <q>{{ block.quote }}</q>
-                </div>
-                {% if block.author is defined and block.author|length %}
-                    <div class="blockquote_author" {% if color is defined and color|length %}style="color: #fff"{% endif %}>{{ block.author }}</div>
-                {% endif %}
+        <div class="col-md-12 blockquote" {% if image is defined and image|length %}style="background:linear-gradient(to bottom, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.4) 100%), url({{ image.one.getUrl }}); background-position: center; background-size: cover; background-repeat: no-repeat; padding: 80px 40px;"{% endif %}>
+            <div class="blockquote_quote" {% if image is defined and image|length %}style="color: #fff;"{% endif %}>
+                <q>{{ block.quote }}</q>
             </div>
+            {% if block.author is defined and block.author|length %}
+                <div class="blockquote_author" {% if color is defined and color|length %}style="color: #fff"{% endif %}>{{ block.author }}</div>
+            {% endif %}
+        </div>
     {% else %}
         <div class="col-md-12 blockquote" {% if color is defined and color|length %}style="background-color: {{ color.getHex() }}; padding: 40px;"{% endif %}>
             <div class="blockquote_quote" {% if color is defined and color|length %}style="color: #fff;"{% endif %}>

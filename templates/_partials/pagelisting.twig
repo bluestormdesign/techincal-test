@@ -3,14 +3,14 @@
 {% set limit = listingConfig.listingLimit.value %}
 {% set order = listingConfig.listingOrder.value %}
 {% set sort = listingConfig.listingSort.value %}
-{% set orderEntries = order ~ " " ~ sort  %}
+{% set orderEntries = order ~ " " ~ sort %}
 
 
 {% set sectionEntries = craft.entries.sectionId(sections).limit(limit).orderBy(orderEntries) %}
 
-<div id="ajax-container" data-section="{{ listingConfig.listingSection }}" data-limit="{{ listingConfig.listingLimit }}" data-order="{{ listingConfig.listingOrder }}" data-sort="{{ listingConfig.listingSort }}" data-year="{{ craft.request.getParam('year') }}" data-month="{{ craft.request.getParam('month') }}">
+<div id="ajax-container" data-section="{{ listingConfig.listingSection }}" data-limit="{{ listingConfig.listingLimit }}" data-order="{{ listingConfig.listingOrder }}" data-sort="{{ listingConfig.listingSort }}" data-year="{{ craft.app.request.getParam('year') }}" data-month="{{ craft.app.request.getParam('month') }}">
     <div class="row row-flex">
-        {% for entry in sectionEntries %}
+        {% for entry in sectionEntries.all() %}
             {% if type is defined and type|length %}
                 {% if type == 'news' %}
                     {% include '_partials/news-listing-card' with { entry: entry } %}

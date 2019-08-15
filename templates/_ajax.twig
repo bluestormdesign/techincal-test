@@ -1,12 +1,12 @@
 {% set listings = craft.entries.section(matches.section).order(matches.sort ~ ' ' ~ matches.order).offset(matches.offset).limit('%s'|format(matches.limit)) %}
 
 {% if matches.year is defined and matches.month is defined %}
-	{# If this is an archive page, limit the entries returned to certain dates #}
-	{% set listings = listings.after(matches.year ~ '-' ~ matches.month).before((matches.year ~ '-' ~ matches.month)|date_modify('+ 1 month')|date('Y-m')) %}
+    {# If this is an archive page, limit the entries returned to certain dates #}
+    {% set listings = listings.after(matches.year ~ '-' ~ matches.month).before((matches.year ~ '-' ~ matches.month)|date_modify('+ 1 month')|date('Y-m')) %}
 {% endif %}
 
 <div class="row row-flex">
-	{% for listing in listings %}
-		{% include '_partials/listing-card' with { entry: listing } %}
-	{% endfor %}
+    {% for listing in listings %}
+        {% include '_partials/listing-card' with { entry: listing } %}
+    {% endfor %}
 </div>

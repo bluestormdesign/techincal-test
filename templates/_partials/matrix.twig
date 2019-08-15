@@ -3,9 +3,9 @@
 {% set prevAlignment = '' %}
 
 <div class="row row-flex">
-{% for block in matrix %}
-	{% include ['_matrix/' ~ block.type, '_matrix/missing'] ignore missing with { block: block } %}
+    {% for block in matrix.all() %}
+        {% include ['_matrix/' ~ block.type, '_matrix/missing'] ignore missing with { block: block } %}
 
-	{% set prevAlignment = block['alignment'] is defined ? block.alignment : '' %}
-{% endfor %}
+        {% set prevAlignment = block['alignment'] is defined ? block.alignment : '' %}
+    {% endfor %}
 </div>

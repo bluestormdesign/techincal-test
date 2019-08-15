@@ -1,18 +1,18 @@
 {% import '_includes/utils' as utils %}
 
 <div class="col-xs-12 col-sm-6">
-	<a href="{{ entry.url }}" class="list-card-item flex-height" title="{{ entry.title }}" onClick="recordEvent('Listing', 'Click', '{{ entry.title }} ({{ entry.uri }})');">
-		<figure class="list-card-image" data-mh="listing-image">
-			{% if entry.thumbImage|length %}
-				{{ utils.responsiveImage(entry.thumbImage.first, 4/3, entry.thumbImage.first.title, { class: 'img-responsive' }) }}
-			{% endif %}
-		</figure>
-		<div class="list-card-content">
-			<h3 data-mh="listing-title">{{ entry.title }}</h3>
-			{% if entry.type == 'news' %}<p class="date">{{ entry.postDate.format('jS F Y') }}</p>{% endif %}
-			<div class="list-card-intro">
-				{{ entry.intro }}
-			</div>
-		</div>
-	</a>
+    <a href="{{ entry.url }}" class="list-card-item flex-height" title="{{ entry.title }}" onClick="recordEvent('Listing', 'Click', '{{ entry.title }} ({{ entry.uri }})');">
+        <figure class="list-card-image" data-mh="listing-image">
+            {% if entry.thumbImage|length %}
+                {{ utils.responsiveImage(entry.thumbImage.one, 4/3, entry.thumbImage.one.title, { class: 'img-responsive' }) }}
+            {% endif %}
+        </figure>
+        <div class="list-card-content">
+            <h3 data-mh="listing-title">{{ entry.title }}</h3>
+            {% if entry.type == 'news' %}<p class="date">{{ entry.postDate.format('jS F Y') }}</p>{% endif %}
+            <div class="list-card-intro">
+                {{ entry.intro }}
+            </div>
+        </div>
+    </a>
 </div>

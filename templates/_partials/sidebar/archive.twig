@@ -1,22 +1,23 @@
 {% cache %}
-	{% set listingEntry = entry is defined and entry.listing ? entry : craft.bluestorm.getListingParent(entry is defined ? entry : null) %}
-	{% set listingConfig = listingEntry.listing %}
+    {% set listingEntry = entry is defined and entry.listing ? entry : craft.bluestorm.getListingParent(entry is defined ? entry : null) %}
+    {% set listingConfig = listingEntry.listing %}
 
-	{% if listingConfig and listingConfig.listingEnabled and listingConfig.listingArchive %}
-		{% set allEntries = craft.entries.section(listingConfig.listingSection).limit(null) %}
+    {% if listingConfig and listingConfig.listingEnabled and listingConfig.listingArchive %}
+        {% set allEntries = craft.entries.section(listingConfig.listingSection).limit(null) %}
 
-		{% if allEntries|length %}
-			<h2>Archive</h2>
+        {% if allEntries|length %}
+            <h2>Archive</h2>
 
-			<ul>
-				{% for year, entriesInYear in allEntries|group('postDate.year') %}
-					{% for month, entriesInMonth in entriesInYear|group('postDate|date("m")') %}
-						<li class="{{ matches is defined and year == matches.year and month == matches.month ? 'active' }}">
-							<a href="/{{ listingEntry.uri }}?year={{ year }}&amp;month={{ month }}"><i class="far fa-fw fa-angle-right"></i> {{ (month ~ '/1/' ~ year)|date('F') }} {{ year }}</a>
-						</li>
-					{% endfor %}
-				{% endfor %}
-			</ul>
-		{% endif %}
-	{% endif %}
+            <ul>
+                {% for year, entriesInYear in allEntries|group('postDate.year') %}
+                    {% for month, entriesInMonth in entriesInYear|group('postDate|date("m")') %}
+                        <li class="{{ matches is defined and year == matches.year and month == matches.month ? 'active' }}">
+                            <a href="/{{ listingEntry.uri }}?year={{ year }}&amp;month={{ month }}"><i class="far fa-fw fa-angle-right"></i> {{ (month ~ '/1/' ~ year)|date('F') }} {{ year }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endif %}
 {% endcache %}

@@ -2,30 +2,30 @@
 
 {% if craft.app.request.getParam('q') is defined and craft.app.request.getParam('q')|length %}
 
-	{% set title = 'Search Results: ' ~ craft.request.getParam('q') %}
+    {% set title = 'Search Results: ' ~ craft.request.getParam('q') %}
 
-	{% set results = craft.entries({
-		section: 'pages, search, news',
-		search: craft.app.request.getParam('q'),
-		order: 'score'
-	}) %}
+    {% set results = craft.entries({
+        section: 'pages, search, news',
+        search: craft.app.request.getParam('q'),
+        order: 'score'
+    }) %}
 
-	{% block content %}
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<h1>Search Results: {{ craft.request.getParam('q') }}</h1>
+    {% block content %}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Search Results: {{ craft.request.getParam('q') }}</h1>
 
-					<div class="children">
-						<div class="row row-flex">
-							{% for result in results %}
-								{% include '_partials/search-result' with { entry: result } %}
-							{% endfor %}
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	{% endblock %}
+                    <div class="children">
+                        <div class="row row-flex">
+                            {% for result in results %}
+                                {% include '_partials/search-result' with { entry: result } %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
 
 {% endif %}

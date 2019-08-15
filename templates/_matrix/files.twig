@@ -1,9 +1,9 @@
 {% if block.files|length %}
     <div class="col-xs-12">
         <ul class="files">
-        {% for file in block.files %}
-            <li class="{{ file.extension }}">
-                <a onclick="recordEvent('Downloads', 'Click', '{{ file.title }}');" target="_blank" href="{{ file.url }}">
+            {% for file in block.files.all() %}
+                <li class="{{ file.extension }}">
+                    <a onclick="recordEvent('Downloads', 'Click', '{{ file.title }}');" target="_blank" href="{{ file.url }}">
                     <span class="fa-2x">
                     {% if file.extension in [ 'ppt', 'pptx' ] %}
                         <i class="fal fa-fw fa-file-powerpoint"></i>
@@ -25,10 +25,10 @@
                         <i class="fal fa-fw fa-file"></i>
                     {% endif %}
                     </span>
-                    {{ file.title }} ({{ file.size|filesize }})
-                </a>
-            </li>
-        {% endfor %}
+                        {{ file.title }} ({{ file.size|filesize }})
+                    </a>
+                </li>
+            {% endfor %}
         </ul>
     </div>
 {% endif %}

@@ -4,7 +4,7 @@
             <div class="col-md-3 col-sm-3 col-xs-12">
                 {% if entry.thumbImage is defined and entry.thumbImage|length %}
                     <div class="news-thumbImage">
-                        <img src="{{ entry.thumbImage.first.getUrl }}" alt="{{ entry.thumbImage.first.title }}">
+                        <img src="{{ entry.thumbImage.one.getUrl }}" alt="{{ entry.thumbImage.one.title }}">
                     </div>
                 {% endif %}
             </div>
