@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "067cece8dfa0ec9c4336efea7fc68c14",
+    "content-hash": "cfc6977cccc36baf88d8921c3081bd4a",
     "packages": [
         {
             "name": "aelvan/imager",
@@ -3473,11 +3473,11 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "3.2.7",
+            "version": "3.2.19",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/1ffe6b820df3c317f7ff007b9d262aceb206658e",
-                "reference": "1ffe6b820df3c317f7ff007b9d262aceb206658e",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/1fd07a20e08890c4416056d3e2ba0a055544b5f7",
+                "reference": "1fd07a20e08890c4416056d3e2ba0a055544b5f7",
                 "shasum": ""
             },
             "require": {
@@ -3513,7 +3513,6 @@
                     "nystudio107\\seomatic\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
@@ -3525,20 +3524,24 @@
             ],
             "description": "SEOmatic facilitates modern SEO best practices & implementation for Craft CMS 3. It is a turnkey SEO system that is comprehensive, powerful, and flexible.",
             "keywords": [
-                "Craft",
-                "JSON-LD",
-                "Sitemap",
                 "cms",
+                "craft",
                 "craft-plugin",
                 "craftcms",
                 "facebook",
+                "json-ld",
                 "meta",
                 "seo",
                 "seomatic",
+                "sitemap",
                 "tags",
                 "twitter"
             ],
-            "time": "2019-06-03T18:31:29+00:00"
+            "support": {
+                "docs": "https://nystudio107.com/plugins/seomatic/documentation",
+                "issues": "https://nystudio107.com/plugins/seomatic/support"
+            },
+            "time": "2019-08-06T15:37:35+00:00"
         },
         {
             "name": "paragonie/random_compat",
