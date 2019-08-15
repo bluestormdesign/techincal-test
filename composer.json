@@ -16,6 +16,7 @@
     "nystudio107/craft-seomatic": "3.2.19",
     "pennebaker/craft-architect": "^2.3",
     "rias/craft-position-fieldtype": "^1.0",
+    "solspace/craft-freeform": "3.2.5",
     "solspace/craft3-freeform-pro": "^2.5",
     "spicyweb/craft-embedded-assets": "2.0.11",
     "studioespresso/craft-dumper": "2.0.0",
@@ -25,7 +26,7 @@
     "supercool/tablemaker": "2.0.1",
     "topshelfcraft/wordsmith": "3.0.5",
     "verbb/default-dashboard": "1.0.5",
-    "verbb/super-table": "2.1.21",
+    "verbb/super-table": "2.2.1",
     "vlucas/phpdotenv": "^2.4.0",
     "wbrowar/contentstats": "^2.1.1"
   },
