@@ -2,7 +2,6 @@
   "require": {
     "aelvan/imager": "2.1.10",
     "barrelstrength/sprout-encode-email": "^2.0.7",
-    "benjamminf/craft-embedded-assets": "1.0.2",
     "charliedev/section-field": "^1.1",
     "craftcms/cms": "3.1.29",
     "craftcms/redactor": "2.3.3.2",
@@ -18,6 +17,7 @@
     "pennebaker/craft-architect": "^2.3",
     "rias/craft-position-fieldtype": "^1.0",
     "solspace/craft3-freeform-pro": "^2.5",
+    "spicyweb/craft-embedded-assets": "2.0.11",
     "studioespresso/craft-dumper": "2.0.0",
     "superbig/craft3-mobiledetect": "^1.0",
     "superbig/craft3-templateselect": "2.0.2",
