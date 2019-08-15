@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e2fb161a8b21c79109bb9bef4ab26303",
+    "content-hash": "36bcd17341a67fc09b8c658f2222c49c",
     "packages": [
         {
             "name": "aelvan/imager",
@@ -2957,11 +2957,11 @@
         },
         {
             "name": "mmikkel/cp-field-inspect",
-            "version": "1.0.5",
+            "version": "1.0.6",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mmikkel/CpFieldInspect-Craft/zipball/e20117d550a5696e0b199bb90d81648356dcc83c",
-                "reference": "e20117d550a5696e0b199bb90d81648356dcc83c",
+                "url": "https://api.github.com/repos/mmikkel/CpFieldInspect-Craft/zipball/fbb5fd3491d63c5734b2ccc2e10459552150ca09",
+                "reference": "fbb5fd3491d63c5734b2ccc2e10459552150ca09",
                 "shasum": ""
             },
             "require": {
@@ -2982,7 +2982,6 @@
                     "mmikkel\\cpfieldinspect\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2994,13 +2993,17 @@
             ],
             "description": "Inspect field handles and easily edit field settings",
             "keywords": [
-                "Craft",
                 "cms",
                 "cp field inspect",
+                "craft",
                 "craft-plugin",
                 "craftcms"
             ],
-            "time": "2018-09-26T08:08:50+00:00"
+            "support": {
+                "docs": "https://github.com/mmikkel/CpFieldInspect-Craft/blob/master/README.md",
+                "issues": "https://github.com/mmikkel/CpFieldInspect-Craft/issues"
+            },
+            "time": "2019-07-21T12:10:58+00:00"
         },
         {
             "name": "mobiledetect/mobiledetectlib",

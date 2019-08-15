@@ -10,7 +10,7 @@
     "ether/simplemap": "3.4.11",
     "fruitstudios/linkit": "1.1.11",
     "lewisjenkins/craft-dynamic-fields": "3.0.8",
-    "mmikkel/cp-field-inspect": "^1.0.5",
+    "mmikkel/cp-field-inspect": "1.0.6",
     "nav33d/craft-activitylog": "^1.0",
     "nystudio107/craft-cookies": "^1.1.11",
     "nystudio107/craft-retour": "3.1.15",
