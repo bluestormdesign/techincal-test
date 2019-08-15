@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "56d2e331af5dab41165b34bfa58d0347",
+    "content-hash": "d8e6c31c503788dceeebff11dedcf8a1",
     "packages": [
         {
             "name": "aelvan/imager",
@@ -2717,11 +2717,11 @@
         },
         {
             "name": "lewisjenkins/craft-dynamic-fields",
-            "version": "3.0.8",
+            "version": "3.0.10",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lewisjenkins/craft-dynamic-fields/zipball/afcbf995f15c448200703efe9d17f326e105e781",
-                "reference": "afcbf995f15c448200703efe9d17f326e105e781",
+                "url": "https://api.github.com/repos/lewisjenkins/craft-dynamic-fields/zipball/505d44b970c941d9dfa405f4ab71f39dc32715eb",
+                "reference": "505d44b970c941d9dfa405f4ab71f39dc32715eb",
                 "shasum": ""
             },
             "require": {
@@ -2729,7 +2729,7 @@
             },
             "type": "craft-plugin",
             "extra": {
-                "name": "Craft Dynamic Fields",
+                "name": "LJ Dynamic Fields",
                 "handle": "craft-dynamic-fields",
                 "developer": "Lewis Jenkins",
                 "developerUrl": "https://lj.io",
@@ -2744,7 +2744,6 @@
                     "lewisjenkins\\craftdynamicfields\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "proprietary"
             ],
@@ -2756,13 +2755,19 @@
             ],
             "description": "Populate Craft fields with dynamic data using the power of Twig.",
             "keywords": [
-                "Craft",
                 "cms",
+                "craft",
                 "craft dynamic fields",
                 "craft-plugin",
-                "craftcms"
+                "craftcms",
+                "lj dynamic fields"
             ],
-            "time": "2019-02-22T19:08:51+00:00"
+            "support": {
+                "docs": "https://github.com/lewisjenkins/craft-dynamic-fields/blob/master/README.md",
+                "issues": "https://github.com/lewisjenkins/craft-dynamic-fields/issues",
+                "email": "lewis@lj.io"
+            },
+            "time": "2019-07-24T12:38:01+00:00"
         },
         {
             "name": "mapkit/jwt",
