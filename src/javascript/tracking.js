@@ -7,7 +7,7 @@ window.replacePhoneNumbersWithLinks = function () {
     }).each(function () {
         $(this).replaceWith(this.textContent.replace(phoneRegex, '<a href="tel:$&">$&</a>'));
     });
-}
+};
 
 window.recordEvent = function (category, action, label) {
     if (typeof window['ga'] === 'undefined') {
@@ -18,7 +18,7 @@ window.recordEvent = function (category, action, label) {
     }
 
     ga('send', 'event', category, action, label);
-}
+};
 
 // Link tracking
 $.expr[':'].external = function (obj) {

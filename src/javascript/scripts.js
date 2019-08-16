@@ -64,18 +64,19 @@ $(function () {
     function changeFontSize(option, tag, value) {
         var element = $(tag);
         if (element) {
-            var fontSize = element.css('font-size').slice(0, -2);
+            let fontSize = element.css('font-size').slice(0, -2);
+            let updatedFontSize;
             if (option === 'increase') {
-                var updatedFontSize = parseInt(fontSize) + value + 'px';
+                updatedFontSize = parseInt(fontSize) + value + 'px';
             } else if (option === 'decrease') {
-                var updatedFontSize = parseInt(fontSize) - value + 'px';
+                updatedFontSize = parseInt(fontSize) - value + 'px';
             }
             element.css('font-size', updatedFontSize);
         }
     }
 
     function changeFontSizes(option, tags, size) {
-        for (var i = 0; i < tags.length; i++) {
+        for (let i = 0; i < tags.length; i++) {
             changeFontSize(option, tags[i], size)
         }
     }

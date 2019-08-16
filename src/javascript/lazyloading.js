@@ -26,11 +26,11 @@ $.fn.isOnScreen = function () {
     bounds.bottom = bounds.top + this.outerHeight();
 
     return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
-}
+};
 
 $.fn.isEmpty = function () {
     return !this.children().length && !this.text().match(/\S/);
-}
+};
 
 function getUrl() {
     let url = '/ajax/' + section + '/' + offset + '/' + limit + '/' + order + '/' + sort + '/';

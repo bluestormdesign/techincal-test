@@ -10,7 +10,7 @@ $('.open-overlay').on('click', function (e) {
     $body.addClass('overlay-open');
 
     $body.keyup(function (event) {
-        if (event.keyCode == 27) {
+        if (event.keyCode === 27) {
             $('.close-overlay').trigger('click')
         }
     });
@@ -21,7 +21,7 @@ $('.open-overlay').on('click', function (e) {
 $('.close-overlay').on('click', function (e) {
     e.preventDefault();
 
-    $body.off('keyup')
+    $body.off('keyup');
     $body.removeClass('overlay-open');
     $overlayMenu.fadeOut();
 });
@@ -42,7 +42,7 @@ $('div#overlay-menu nav > ul > li > a span').on('click', function (e) {
         .toggleClass('fa-plus');
 });
 
-$(window).on('scroll', function (e) {
+$(window).on('scroll', function () {
     let st = $(this).scrollTop();
 
     if (st < 50) {
