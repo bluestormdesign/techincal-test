@@ -2,7 +2,7 @@
 
 <div id="overlay-menu">
 
-    <a href="#" id="overlay-menu-close" class="close-overlay"><i class="far fa-fw fa-times"></i></a>
+    <a href="#" id="overlay-menu-close" class="close-overlay"><i class="fas fa-fw fa-times"></i></a>
 
     <div class="container">
         <div class="row">
@@ -18,7 +18,7 @@
                             {% nav page in craft.entries.section('pages').showInNavigation(true).level('<= 2').all() %}
                                 <li class="{{ entry is defined and page.id == entry.id ? 'current' : (entry is defined and page.isParentOf(entry) ? 'parent-current') }}">
                                     <a href="{{ page.url }}">{{ page.title }} {% if page.getDescendants().showInNavigation(true)|length %}
-                                            <span><i class="far fa-fw fa-plus"></i></span>{% endif %}</a>
+                                            <span><i class="fas fa-fw fa-plus"></i></span>{% endif %}</a>
                                     {% ifchildren %}
                                         <ul>
                                             {% children %}

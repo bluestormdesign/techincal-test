@@ -6,23 +6,23 @@
                     <a onclick="recordEvent('Downloads', 'Click', '{{ file.title }}');" target="_blank" href="{{ file.url }}">
                     <span class="fa-2x">
                     {% if file.extension in [ 'ppt', 'pptx' ] %}
-                        <i class="fal fa-fw fa-file-powerpoint"></i>
+                        <i class="far fa-fw fa-file-powerpoint"></i>
                     {% elseif file.extension in [ 'xls', 'xlsx', 'csv' ] %}
-                        <i class="fal fa-fw fa-file-excel"></i>
+                        <i class="far fa-fw fa-file-excel"></i>
                     {% elseif file.extension in [ 'doc', 'docx', 'rtf' ] %}
-                        <i class="fal fa-fw fa-file-word"></i>
+                        <i class="far fa-fw fa-file-word"></i>
                     {% elseif file.extension in [ 'pdf' ] %}
-                        <i class="fal fa-fw fa-file-pdf"></i>
+                        <i class="far fa-fw fa-file-pdf"></i>
                     {% elseif file.extension in [ 'zip', 'rar', '7zip', 'gz' ] %}
-                        <i class="fal fa-fw fa-file-archive"></i>
+                        <i class="far fa-fw fa-file-archive"></i>
                     {% elseif file.extension in [ 'png', 'jpeg', 'jpg', 'apng', 'gif', 'bmp', 'psd', 'ai' ] %}
-                        <i class="fal fa-fw fa-file-image"></i>
+                        <i class="far fa-fw fa-file-image"></i>
                     {% elseif file.extension in [ 'mov', 'mp4', 'wmv', 'ogv', 'webm', 'avi' ] %}
-                        <i class="fal fa-fw fa-file-video"></i>
+                        <i class="far fa-fw fa-file-video"></i>
                     {% elseif file.extension in [ 'mp3', 'aac', 'wav' ] %}
-                        <i class="fal fa-fw fa-file-audio"></i>
+                        <i class="far fa-fw fa-file-audio"></i>
                     {% else %}
-                        <i class="fal fa-fw fa-file"></i>
+                        <i class="far fa-fw fa-file"></i>
                     {% endif %}
                     </span>
                         {{ file.title }} ({{ file.size|filesize }})

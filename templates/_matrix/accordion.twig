@@ -2,7 +2,7 @@
     <div class="accordions">
         {% for accordion in block.accordion.all() %}
             <h3 class="accordion">{{ accordion.heading }}
-                <span class="accordion-open"><i class="far fa-fw fa-angle-down"></i></span><span class="accordion-close"><i class="far fa-fw fa-angle-up"></i></span>
+                <span class="accordion-open"><i class="fa fa-fw fa-angle-down"></i></span><span class="accordion-close"><i class="fa fa-fw fa-angle-up"></i></span>
             </h3>
             <div class="accordion">
                 {{ accordion.body }}
